@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1119贷-同城互联网金融平台</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+	<link rel="stylesheet" href="./assets/scripts/plugins/pyui/css/pyui.css" />
+	<link rel="stylesheet" type="text/css" href="./assets/scripts/plugins/validform_v5.3.2/Validform.css" />
+	<link rel="stylesheet" type="text/css" href="./assets/css/base.css" />
+	
+</head>
+<body>
+	
+    <div class="wrapper">
+        <div class="page page-userCenter">
+            <!-- 头部 -->
+            @@include('./include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+						<form action="" class="ui-form form-column-2">
+                    		<div class="ui-form-item">
+							    <label class="form-label">普通弹出框：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open1">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">嵌入IFrame：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open2">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">预约产品：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open3">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">确认投资：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open4">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">绑卡提示：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open5">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">去实名认证：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open6">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">成功：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open7">打开</a>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">失败：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open8">打开</a>
+							    </span>
+							</div>
+						    <div class="ui-form-item">
+							    <label class="form-label">登录：</label>
+							    <span class="form-block form-block-text">
+							    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-popup-open9">打开</a>
+							    </span>
+						    </div>							
+						</form>
+
+						<div class="page"></div>
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+            <!-- 底部 -->
+			@@include('./include/footer.html',{"baseurl":"."})
+            <!-- 底部 -->
+        </div>
+        <!--/page-->
+    </div>
+    <!--/wrapper-->
+
+
+	<!-- 弹出框的DOM结构必须放在fn-popup-hide容器中 -->
+    <div class="fn-popup-hide">
+    	<!-- 预约产品 -->
+		<div class="appointment-product ui-form form-text-auto layui-form" id="j-appointment-product">
+			<div class="ui-form-item">
+			    <label class="form-label form-label-default">预约产品：</label>
+			    <span class="form-block m-radio-customized-type2">
+			    	<input type="radio" name="product_type" value="A" title="玖安定投" />
+					<input type="radio" name="product_type" value="B" title="玖安定投" />
+			    </span>
+		    </div>
+		    <div class="ui-form-item">
+			    <label class="form-label form-label-default">可用余额：</label>
+			    <span class="form-block form-block-text">1119.21元</span>
+		    </div>
+		    <div class="ui-form-item">
+			    <label class="form-label form-label-default">预期月收益：</label>
+			    <span class="form-block form-block-text">111元</span>
+		    </div>
+		    <div class="ui-form-item">
+			    <label class="form-label form-label-default">预约金额：</label>
+			    <span class="form-block form-block-text form-block-prominent">
+			    	1110<font>元</font>
+			    </span>
+		    </div>
+		    <div class="ui-form-item text-align-center">
+		    	<a href="javascript:;" class="ui-btn-yellow-gradients" id="j-popup-btn1">立即预约</a>
+		    </div>
+		</div>
+		<!-- 预约产品 -->
+
+		<!-- 我要投资 - 确认投资 -->
+		<div class="confirm-investment" id="j-confirm-investment">
+			<div class="investment-title">个人房屋抵押贷款 WSFMP180322973</div>
+			<div class="ui-form form-text-auto form-column-2 form-unaverage-64 layui-form">
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">借款总额：</label>
+				    <span class="form-block form-block-text">500,000 元</span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">借款周期：</label>
+				    <span class="form-block form-block-text">180 天</span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">借款利率：</label>
+				    <span class="form-block form-block-text color-red">13%（年利率）</span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">剩余金额：</label>
+				    <span class="form-block form-block-text color-red">102,000 元</span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">投标金额：</label>
+				    <span class="form-block form-block-text">1000 元</span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label form-label-default">预期利息：</label>
+				    <span class="form-block form-block-text color-red">64.11 元</span>
+			    </div>
+			</div>
+			<div class="ui-form layui-form form-text-auto auto-fixed-label confirm-investment-form">
+			    <div class="ui-form-item ">
+				    <label class="form-label">可用余额：</label>
+				    <span class="form-block form-block-text form-block-prominent">
+				    	1110<font>元</font>
+				    	<a href="javascript:;" class="go-recharge">去充值</a>
+				    </span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label">登录密码：</label>
+				    <span class="form-block">
+				    	<span class="form-input-wrap">
+						    <input type="password" name="title" placeholder="请输入内容" class="layui-input" />
+					    </span>
+				    </span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label">验证码：</label>
+				    <span class="form-block form-block-short">
+				    	<span class="form-input-wrap">
+			    			<input type="text" class="layui-input">
+			    		</span>
+		    			<img src="./assets/images/pic-verify-code.jpg" alt="验证码" class="verify-code">
+				    	<a href="javascript:;" class="form-link-default">看不清，换一个！</a>
+				    </span>
+			    </div>
+			    <div class="ui-form-item">
+				    <label class="form-label"></label>
+				    <span class="form-block">
+			    		<input type="radio" name="readme" value="true" title="《投资风险提示书》" />
+				    </span>
+			    </div>
+			    <div class="ui-form-item text-align-center form-item-full">
+			    	<a href="javascript:;" class="ui-btn-yellow-gradients" id="j-popup-btn2">立即预约</a>
+			    </div>
+			</div>
+		</div>
+		<!-- 我要投资 - 确认投资 -->
+
+		<!-- 绑定银行卡-温馨提示 -->
+		<div class="bind-card-tip" id="j-bind-card-tip">
+			<div class="card-tip-wrap icon-card-tip">
+				<div class="tip-title">尊敬的用户，您好：</div>
+				<div class="tip-cont">
+				为了保障您的资金安全，您在1119平台仅能绑定一张银行卡，且有在投资金及账户余额时无法更换银行卡，所以请您仔细选择绑定的银行卡。
+				</div>
+				<div class="tip-remark">友情提示：为了您的投资便利，请选择额度较高的银行卡进行绑定！</div>
+			</div>
+			<div class="tip-title-wrap">
+				<label class="title-text">银行限额如下</label>
+			</div>
+			<div class="table-body">
+                <table class="layui-table">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead class="theader">
+                        <tr>
+                            <th>银行名称</th>
+                            <th>单笔限额(元)</th>
+                            <th>单日限额(元)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>富滇银行</td>
+                            <td>无限制</td>
+                            <td>无限制</td>
+                        </tr>
+                        <tr>
+                            <td>富滇银行</td>
+                            <td>无限制</td>
+                            <td>无限制</td>
+                        </tr>
+                        <tr>
+                            <td>富滇银行</td>
+                            <td>无限制</td>
+                            <td>无限制</td>
+                        </tr>
+                        <tr>
+                            <td>富滇银行</td>
+                            <td>无限制</td>
+                            <td>无限制</td>
+                        </tr>
+                    </tbody>
+                </table>
+			</div>
+			<a href="javascript:;" class="ui-btn-yellow-gradients" id="j-popup-btn3">已知悉，马上绑卡</a>
+		</div>
+		<!-- 绑定银行卡-温馨提示 -->
+
+		<!-- 去实名认证 -->
+		<div class="popup-tip-wrap icon-card-tip" id="j-popup-tip">
+			<div class="tip-title">尊敬的用户您好：</div>
+			<div class="tip-cont">
+			欢迎您来到1119平台，为了您的账户交易安全性，请您尽快完成<label class="tip-remark">《实名认证》</label>，由衷感谢您的支持！
+			</div>
+			<div class="tip-btm">
+				<a href="javascript:;" class="ui-btn-yellow-gradients" id="j-popup-btn4">去实名认证</a>
+			</div>
+		</div>
+		<!-- 去实名认证 -->
+
+		<!-- 成功 -->
+		<div class="popup-tip-success" id="j-popup-tip-success">
+			<div class="popup-tip-cont icon-popup-success">
+				<div class="popup-tip-title">恭喜您投标成功</div>
+				<div class="popup-tip-remark">投标金额：<font>1000元</font></div>
+			</div>
+			<div class="popup-btm">
+				<a href="javascript:;" class="ui-btn-blue-gradients btn-left">查看投资</a>
+				<a href="javascript:;" class="ui-btn-yellow-gradients btn-right" id="j-popup-btn5">继续投标</a>
+			</div>
+		</div>
+		<!-- 成功 -->
+
+		<!-- 失败 -->
+		<div class="popup-tip-success" id="j-popup-tip-fail">
+			<div class="popup-tip-cont icon-popup-fail">
+				<div class="popup-tip-title">投标失败</div>
+				<div class="popup-tip-remark">失败原因：余额不足</div>
+			</div>
+			<div class="popup-btm">
+				<a href="javascript:;" class="ui-btn-yellow-gradients btn-tip-max" id="j-popup-btn6">重新投标</a>
+			</div>
+		</div>
+		<!-- 失败 -->
+
+		<!-- 登录 -->
+		<div class="popup-login" id="j-popup-login">
+			<form class="ui-form form-login" id="j-form-login">
+				<div class="ui-form-head">
+					<h3 class="ui-title">登录您的账户</h3>
+					<div>请输入您的用户名，密码和验证码</div>
+				</div>
+				<div class="ui-form-body">
+					<div class="ui-form-item">
+						<span class="ui-input">
+							<i class="icon icon-user-2"></i>
+							<input type="text"  name="name" class="inputxt" placeholder="请输入用户名" datatype="s6-18" nullmsg="用户名不能为空" errormsg="昵称至少6个字符,最多18个字符！" autocomplete="off"/>
+						</span>
+						<span class="Validform_checktip form-checktip"><span>
+					</div>
+					<div class="ui-form-item">
+						<span class="ui-input">
+							<i class="icon icon-lock-2"></i>
+							<input type="password" name="password" placeholder="请输入登录密码" nullmsg="请输入登录密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" autocomplete="off"/>
+						</span>
+						<span class="Validform_checktip form-checktip"></span>
+					</div>
+					<div class="ui-form-item checkcode">
+						<span class="ui-input">
+							<input type="text" placeholder="验证码" placeholder="请输入验证码" nullmsg="请输入验证码" datatype="*4"  errormsg="验证码输入错误" autocomplete="off"/>
+						</span>
+						<span class="ui-img">
+							<img src="#" alt="" />
+						</span>
+						<span class="Validform_checktip form-checktip"></span>
+					</div>
+					<div class="ui-form-item others">
+						<a href="#" class="ui-link">找回密码</a>
+						<span></span>
+						<a href="#" class="ui-link">激活账号</a>
+					</div>
+					<div class="ui-form-item operate">
+						<input type="submit" class="ui-btn ui-btn-green-gradients j-btn-login" value="立即登录"/>
+					</div>
+				</div>
+				<div class="ui-form-foot">
+					<span class="login-qq">QQ账号登录</span>
+					<span class="login-reg">新用户，
+						<a href="#" class="ui-link">免费注册</a>
+					</span>
+				</div>
+			</form>
+		</div>
+		<!-- 登录 -->
+	</div>
+    <script type="text/javascript" src="./assets/scripts/vendor.js"></script>
+	<script type="text/javascript" src="./assets/scripts/plugins/pyui/index.js"></script>
+	<script type="text/javascript" src="./assets/scripts/plugins/validform_v5.3.2/Validform.js"></script>
+    <script type="text/javascript">
+    	var mypopup = CompPopup();
+
+    	$('#j-btn-popup-open1').click(function(){
+    		mypopup.open({
+    			//标题
+    			title: '自定义标题',
+			    //这里的content也可以是DOM对象
+			    content: '自定义内容',
+			    //自定义按钮即按钮事件
+			    btn: ['是', '否', '取消'],
+			    //按钮居中对齐
+			    btnAlign: 'c',
+			    yes: function(){
+			        alert('你点击了是');
+			    },
+			    btn2: function(){
+			        alert('你点击了否');
+			    },
+			    btn3: function(){
+			        alert('你点击了取消');
+			    }
+			    //更多按钮，以此方式类推
+    		});
+    	});
+
+    	$('#j-btn-popup-open2').click(function(){
+    		mypopup.open({
+    			type: 2,
+    			//标题
+    			title: '内嵌IFrame',
+			    //这里的content也可以是DOM对象
+			    content: './iframetest.html',
+			    area: ['480px', '330px']
+    		});
+    	});
+
+    	//<!-- 预约产品 -->
+    	var popupIndex1;
+    	$('#j-btn-popup-open3').click(function(){
+    		popupIndex1 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '温馨提示',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-appointment-product'),
+			    area: ['480px', '330px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn1').click(function(){
+    		mypopup.close(popupIndex1);
+    	});
+    	//<!-- 预约产品 -->
+
+		//<!-- 我要投资 - 确认投资 -->
+    	var popupIndex2;
+    	$('#j-btn-popup-open4').click(function(){
+    		popupIndex2 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '投资',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-confirm-investment'),
+			    area: ['540px', '550px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn2').click(function(){
+    		mypopup.close(popupIndex2);
+    	});
+    	//<!-- 我要投资 - 确认投资 -->
+    	
+		//<!-- 绑定银行卡-温馨提示 -->
+    	var popupIndex3;
+    	$('#j-btn-popup-open5').click(function(){
+    		popupIndex3 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '投资',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-bind-card-tip'),
+			    area: ['730px', '690px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn3').click(function(){
+    		mypopup.close(popupIndex3);
+    	});
+    	//<!-- 绑定银行卡-温馨提示 -->
+    	
+		//<!-- 去实名认证 -->
+    	var popupIndex4;
+    	$('#j-btn-popup-open6').click(function(){
+    		popupIndex4 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '温馨提示',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-popup-tip'),
+			    area: ['480px', '310px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn4').click(function(){
+    		mypopup.close(popupIndex4);
+    	});
+    	//<!-- 去实名认证 -->
+    	
+    	//<!-- 成功 -->
+    	var popupIndex5;
+    	$('#j-btn-popup-open7').click(function(){
+    		popupIndex5 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '投资',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-popup-tip-success'),
+			    area: ['480px', '350px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn5').click(function(){
+    		mypopup.close(popupIndex5);
+    	});
+    	//<!-- 成功 -->
+    	
+    	//<!-- 失败 -->
+    	var popupIndex6;
+    	$('#j-btn-popup-open8').click(function(){
+    		popupIndex6 = mypopup.open({
+    			type: 1,
+    			//标题
+    			title: '投资',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-popup-tip-fail'),
+			    area: ['480px', '350px']
+    		});
+    	});
+    	//自定义关闭弹出框
+    	$('#j-popup-btn6').click(function(){
+    		mypopup.close(popupIndex6);
+    	});
+    	//<!-- 失败 -->
+
+    	//<!-- 登录 -->
+    	var popupIndex9;
+    	$('#j-btn-popup-open9').click(function(){
+    		popupIndex9 = mypopup.open({
+				type: 1,
+    			//标题
+    			title: '投资',
+			    //这里的content也可以是DOM对象
+			    content: $('#j-popup-login'),
+				area: ['350px' ],
+				shadeClose:true,
+				end:function(){
+					
+				}
+			});
+			$(".layui-layer-title,.layui-layer-setwin").hide();
+    	});
+		// 登录验证
+		$("#j-form-login").Validform({
+            tiptype: function (msg, o, cssctl) {
+                if (!o.obj.is("form")) {//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                    var objtip = o.obj.parent().siblings(".Validform_checktip");
+                    cssctl(objtip, o.type);
+                    objtip.text(msg);
+                    if(o.type===3){
+                        o.obj.removeClass("Validform_error").parent().addClass("Validform_error");
+                    }else if(o.type===2){
+                        o.obj.removeClass("Validform_error").parent().removeClass("Validform_error");
+                    }
+                }
+            }
+        });
+    	//<!-- 登录 -->
+
+    </script>
+</body>
+</html>

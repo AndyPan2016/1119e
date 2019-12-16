@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1119贷-同城互联网金融平台 项目详情</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/page.investment.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page page-investment page-investment_detail">
+            <!-- 头部 -->
+            <meta name="viewport" content="width=1200,  user-scalable=no">
+<div class="header">
+    <div class="header-top">
+        <div class="header-wrap">
+            <label class="header-top-item">客服热线:400-610-1119 ( 9:00-17:30 )</label>
+            <span class="header-top-item">
+                <a href="javascript:;" class="header-login-regist" id="j-btn-popup-login">登录</a>|
+                <a href="../register.html" class="header-login-regist">注册</a>
+            </span>
+            <span class="header-tools">
+                <a href="javascript:;" class="tools-item"><i class="icon icon-trumpet-2"></i>公告</a>
+                <a href="../mall/" class="tools-item "><i class="icon icon-integral"></i>积分商城</a>
+                <a href="javascript:;" class="tools-item"><i class="icon icon-phone-2"></i>下载移动客户端</a>
+                <a href="javascript:;" class="tools-item">帮助中心</a>
+                <a href="javascript:;" class="tools-item">新手指引</a>
+                <a href="javascript:;" class="tools-item">关注我们</a>
+                <a href="javascript:;" class="tools-item">风险教育</a>
+            </span>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="header-wrap">
+            <a href="/index.html" class="header-logo"></a>
+            <span class="header-site-area" id="j-nav-site">
+                <a href="javascript:;" class="site-area icon-site-down">
+                    重庆站
+                </a>
+                <div class="site-area-list">
+                    <a href="javascript:;" class="site-area-item">重庆站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">昆明站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">江苏站 &gt;</a>
+                </div>
+            </span>
+            <span class="nav-wrap">
+                <a href="/" class="nav-item active">首页</a>
+                <span class="nav-item caret">
+                    <a class="nav-item-text" href="/borrow.html">我要投资</a>
+                    <span class="nav-caret-list">
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                    </span>
+                </span>
+                <a href="/investment/list.html" class="nav-item">我要借款</a>
+                <a href="/information/" class="nav-item">信息披露</a>
+                <a href="/about/introduction.html" class="nav-item">关于我们</a>
+            </span>
+            <a href="/usercenter/" class="nav-my-account icon-my-account">我的账户</a>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框的DOM结构必须放在fn-popup-hide容器中 -->
+<div class="fn-popup-hide">
+    <!-- 登录 -->
+    <div class="popup-login" id="j-popup-login">
+        <form class="ui-form form-login" id="j-form-login">
+            <div class="ui-form-head">
+                <h3 class="ui-title">登录您的账户</h3>
+                <div>请输入您的用户名，密码和验证码</div>
+            </div>
+            <div class="ui-form-body">
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-user-2"></i>
+                        <input type="text"  name="name" class="inputxt" placeholder="请输入用户名" datatype="s6-18" nullmsg="用户名不能为空" errormsg="昵称至少6个字符,最多18个字符！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"><span>
+                </div>
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-lock-2"></i>
+                        <input type="password" name="password" placeholder="请输入登录密码" nullmsg="请输入登录密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item checkcode">
+                    <span class="ui-input">
+                        <input type="text" placeholder="验证码" placeholder="请输入验证码" nullmsg="请输入验证码" datatype="*4"  errormsg="验证码输入错误" autocomplete="off"/>
+                    </span>
+                    <span class="ui-img">
+                        <img src="#" alt="" />
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item others">
+                    <a href="#" class="ui-link">找回密码</a>
+                    <span></span>
+                    <a href="#" class="ui-link">激活账号</a>
+                </div>
+                <div class="ui-form-item operate">
+                    <input type="submit" class="ui-btn ui-btn-green-gradients j-btn-login" value="立即登录"/>
+                </div>
+            </div>
+            <div class="ui-form-foot">
+                <span class="login-qq">QQ账号登录</span>
+                <span class="login-reg">新用户，
+                    <a href="#" class="ui-link">免费注册</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <!-- 登录 -->
+</div>
+
+            <!-- 头部 -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                        <div class="ui-bread">
+                            <a href="#" class="ui-link">我要投资</a> >
+                            <a href="#" class="ui-link">玖安卫士</a> >
+                            <a href="#" class="ui-link">项目详情</a>
+                        </div>
+                        <div class="m-intro m-intro-detail">
+                            <div class="intro-basic intro-detail-basic fn-left">
+                                <h2 class="ui-title">好标限时转让</h2>
+                                <p class="tags">
+                                    <span class="tags-item">重庆</span>
+                                    <span class="tags-item">一口价</span>
+                                </p>
+                                <div class="datums">
+                                    <p class="datum datums-list">
+                                        <span class="val">
+                                            <i class="ui-numeric">15.44</i>%</span>
+                                        <i class="ui-text">预期年利率</i>
+                                    </p>
+                                    <p class="datum datums-list ">
+                                        <span class="val">
+                                            <i class="ui-numeric">66</i>天</span>
+                                        <i class="ui-text">到期天数</i>
+                                    </p>
+                                    <p class="datum datums-list duedays">
+                                        <span class="val">
+                                            <i class="ui-numeric">1,000</i>元</span>
+                                        <i class="ui-text">总金额</i>
+                                    </p>
+                                    <p class="datum datums-list duedays">
+                                        <span class="val">
+                                            <i class="ui-numeric">980</i>元</span>
+                                        <i class="ui-text">交易价款</i>
+                                    </p>
+                                    <p class="datum datums-list duedays">
+                                        <span class="val">
+                                            <i class="ui-numeric">1,007.81</i>元</span>
+                                        <i class="ui-text">到期本息</i>
+                                    </p>
+                                </div>
+
+                                <div class="ui-repeater others paydetail">
+                                    <p class="ui-repeater-item">
+                                        <span class="ui-label">发布日期：</span>
+                                        <span class="ui-text">2018-03-30</span>
+                                    </p>
+                                    <p class="ui-repeater-item">
+                                        <span class="ui-label">有效期：</span>
+                                        <span class="ui-text">2018-05-30</span>
+                                    </p>
+                                    <p class="ui-repeater-item">
+                                        <span class="ui-label">交易状态：</span>
+                                        <span class="ui-text">已发布</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="intro-operate intro-detail-operate fn-right">
+                                <div class="others">
+                                    <p class="status">
+                                        <span class="ui-label">发布人</span>
+                                        <span class="ui-p">sdd***25</span>
+                                    </p>
+                                    <p class="status">
+                                        <span class="ui-label">剩余可投资金额</span>
+                                        <span class="ui-numeric color-red">40,990<i>元</i></span>
+                                    </p>
+                                    <a href="javascript:;" class="ui-btn ui-btn-yellow-gradients">立即投资</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 选项卡区域 start -->
+                        <div class="ui-tabs j-tabs details-tab" id="j-tabs">
+                            <ul class="ui-tabs-hd">
+                                <li class="tabs-hd-item j-tabs-hd-item active first">
+                                    <span></span>原债权详情
+                                </li>
+                            </ul>
+                            <div class="ui-tabs-bd">
+                                <div class="tabs-bd-item j-tabs-cont-item active">
+                                    <div class="content">
+                                        <!--table-->
+                                        <div class="ui-table">
+                                            <div class="table-header">
+                                                <span class="ui-details-title"><i class="icon"></i>投资金额：¥2000元</span>
+                                                <span class="ui-details-title"><i class="icon"></i>年利率：20%</span>
+                                                <span class="ui-details-title"><i class="icon"></i>借出天数：180天</span>
+                                            </div>
+                                            <div class="table-body">
+                                                <table class="layui-table">
+                                                    <colgroup>
+                                                        <col width="150">
+                                                        <col width="200">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead class="theader">
+                                                        <tr>
+                                                            <th>借款标</th>
+                                                            <th>投资金额</th>
+                                                            <th>账期</th>
+                                                            <th>应收总额</th>
+                                                            <th>应收本金</th>
+                                                            <th>应收利息</th>
+                                                            <th>服务费</th>
+                                                            <th>收益</th>
+                                                            <th>状态</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-green">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!--table end-->
+                                        <!--table-->
+                                        <div class="ui-table project-details">
+                                            <div class="table-header">
+                                                <span class="ui-details-title"><i class="icon"></i>投资项目详情</span>
+                                            </div>
+                                            <div class="table-body">
+                                                <table class="layui-table">
+                                                    <colgroup>
+                                                        <col width="150">
+                                                        <col width="200">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead class="theader">
+                                                        <tr>
+                                                            <th>资产名称</th>
+                                                            <th>项目编号</th>
+                                                            <th>项目总额</th>
+                                                            <th>借款天数</th>
+                                                            <th>收益方式</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                        <tr>
+                                                            <td>公司流动资金短期借款</td>
+                                                            <td>CPP20180322972</td>
+                                                            <td>¥900,000</td>
+                                                            <td>180天</td>
+                                                            <td>按月付息</td>
+                                                            <td class="color-green"><a href="#">查看原债权</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!--table end-->
+                                    </div>
+                                    <!--/content-->
+                                </div>
+                            </div>
+                            <!--/ui-tabs-bd-->
+                        </div>
+                        <!-- 选项卡区域 end   -->
+                    </div>
+                </div>
+            </div>
+            <!-- 底部 -->
+            <div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-base-info">
+            <span class="footer-base-item">
+                <label class="info-item-title">关于我们</label>
+                <a href="javascript:;" class="info-item-link">企业管理</a>
+                <a href="javascript:;" class="info-item-link">业绩报告</a>
+                <a href="javascript:;" class="info-item-link">平台数据</a>
+                <a href="javascript:;" class="info-item-link">活动专区</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">安全保障</label>
+                <a href="javascript:;" class="info-item-link">信息披露</a>
+                <a href="javascript:;" class="info-item-link">银行存管</a>
+                <a href="javascript:;" class="info-item-link">风险管理</a>
+                <a href="javascript:;" class="info-item-link">法律法规</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">用户中心</label>
+                <a href="javascript:;" class="info-item-link">新手指引</a>
+                <a href="javascript:;" class="info-item-link">我的账户</a>
+                <a href="javascript:;" class="info-item-link">帮助中心</a>
+                <a href="javascript:;" class="info-item-link">关于我们</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">服务产品</label>
+                <a href="javascript:;" class="info-item-link">我要投资</a>
+                <a href="javascript:;" class="info-item-link">我要借款</a>
+                <a href="javascript:;" class="info-item-link">产品介绍</a>
+                <a href="javascript:;" class="info-item-link">收费规则</a>
+            </span>
+
+            <span class="footer-qr-code">
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">关注微信公众号</label>
+                </span>
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">下载APP投资</label>
+                </span>
+            </span>
+
+            <span class="footer-contact-info">
+                <label class="contact-info-title">全国统一服务热线：</label>
+                <label class="contact-info-phone">400-610-1119</label>
+                <label class="contact-info-title">公司地址：</label>
+                <label class="contact-info-address">重庆市渝北区黄山大道两江星界3栋10-4</label>
+            </span>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-friendly-link">
+                友情链接：
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">观世纪</a>
+                <a href="javascript:;" class="friendly-link-item">早导网</a>
+                <a href="javascript:;" class="friendly-link-item">网贷之家</a>
+                <a href="javascript:;" class="friendly-link-item">天眼网贷</a>
+            </div>
+            <div class="footer-copyright-record">
+                <label class="copyright">Copyright © 2016 1119贷版权所有</label>
+                <label class="record-num">渝ICP备13008087号</label>
+            </div>
+        </div>
+    </div>
+    <div class="footer-record-info">
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe01.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe02.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe03.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe04.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe05.png" alt=""></a>
+    </div>
+</div>
+
+            <!-- 底部 -->
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/swiper.js"></script>
+    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+    <script>
+        $(function() {
+            //调用CompTabs组件
+            var tabs = CompTabs({
+                target: $('#j-tabs')
+            });
+            //自定义选项卡组件的切换事件
+            tabs.on('switch', function(target, thisItem, idx) {
+                console.info(idx);
+            });
+            var popup = CompPopup();
+            var mypager = CompPager();
+            var pager = mypager.render({
+                //指定元素
+                target: '#j-pager-custom',
+                //数据总数，从服务端得到
+                total: 50,
+                //每页显示的条数
+                pageCount: 10
+            });
+        })
+    </script>
+</body>
+
+</html>

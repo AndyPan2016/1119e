@@ -1,0 +1,521 @@
+@charset "UTF-8";
+/**
+ * 表单
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-05-16 14:29:49
+ */
+
+@import "_mixins.less";
+
+.ui-form{
+	.clearfix();
+	/*默认表单样式*/
+	.ui-form-item{
+		/*表单行高*/
+		@rowsHeight: 40px;
+		/*label固定宽度*/
+		@labelWidth: 130px;
+		display: block;
+		min-height: @rowsHeight;
+		margin: 6px auto;
+		position: relative;
+		.form-label{
+			display: inline-block;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: @labelWidth;
+			height: @rowsHeight;
+			line-height: @rowsHeight;
+			text-align: left;
+			font-size: @font-size-grade1;
+			color: @color-gray-dark;
+			.text-overflow();
+			position: absolute;
+			top: 0;
+			left: 0;
+			&.form-label-title{ 
+				padding: 0;
+				font-size: 18px;
+				color: #333;	
+			}
+		}
+		.form-block{
+			display: block;
+			min-height: @rowsHeight;
+			/* line-height: @rowsHeight; */
+			font-size: @font-size-grade1;
+			color: @color-gray-dark;
+			margin-left: @labelWidth + 20px;
+			/* vertical-align: initial; */
+			textarea{resize:none;}
+
+			/*默认wrap宽度*/
+			@defaultWrapWidth: 210px;
+			/*short宽度*/
+			@shortWrapWidth: 120px;
+			/*long宽度*/
+			@longWrapWidth: 290px;
+			.form-input-wrap{
+				display: inline-block;
+				width: @defaultWrapWidth;
+				margin-right: 10px;
+				&.input-min-wrap{
+					width: auto;
+					min-width: @defaultWrapWidth;
+				}
+			}
+			.verify-code{
+				display: inline-block;
+				margin-left: -8px;
+				margin-top: -12px;
+				position: relative;
+				top: 14px;
+			}
+			.form-inline-elem{
+				display: inline-block;
+				height: @rowsHeight;
+			}
+			.form-input-auxiliary{
+				display: inline-block;
+				/*height: @rowsHeight - 4px;*/
+				line-height: @rowsHeight - 4px;
+				font-size: 12px;
+				color: @color-gray-grade4;
+				&.auxiliary-full{
+					width: 100%;
+					height: auto;
+					line-height: 20px;
+				}
+				&.auxiliary-color-red{
+					color: @color-red;
+				}
+			}
+			/*纯文字 添加行高*/
+			&.form-block-text{
+				line-height: @rowsHeight;
+				&.color-red{
+					color: @color-red;
+				}
+				&.font-size-default{
+					font-size: @font-size-grade1;
+				}
+			}
+			/*突出的文字样式*/
+			&.form-block-prominent{
+				font-size: @font-size-30;
+				color: @color-red;
+				.block-font-default{
+					font-size: @font-size-grade1;
+					color: @color-gray-dark;
+				}
+				font{
+					font-size: @font-size-grade1;
+				}
+			}
+			&.form-block-short{
+				.form-input-wrap{
+					width: @shortWrapWidth - 10px;
+
+					&.input-min-wrap{
+						width: auto;
+						min-width: @defaultWrapWidth;
+					}
+				}
+				.ui-datepicker{
+					width: 80px;
+				}
+			}
+			&.form-block-long{
+				.form-input-wrap{
+					width: @longWrapWidth;
+
+					&.input-min-wrap{
+						width: auto;
+						min-width: @defaultWrapWidth;
+					}
+				}
+			}
+		}
+		.Validform_checktip{
+			display: none;
+			&.form-checktip{
+				display: inline-block;
+			}
+
+			&.Validform_error, 
+			&.Validform_wrong,
+			&.Validform_right{
+				display: inline-block;
+			}
+		}
+		.form-link-default{
+			font-size: @font-size-base;
+			color: @color-gray-grade1;
+			text-decoration: underline;
+		}
+		&.text-align-center{
+			text-align: center;
+		}
+		/*label、block各自为一行*/
+		&.form-item-each{
+			.form-label{
+				display: block;
+				position: relative;
+				width: initial;
+			}
+			.form-block{
+				margin: 0;
+			}
+		}
+	}
+	/*两列表单样式*/
+	&.form-column-2{
+		.ui-form-item{
+			width: 50%;
+			float: left;
+			&.form-item-full{
+				width: 100%;
+			}
+		}
+		/*非均分 第一列宽度大于第二列*/
+		&.form-unaverage{
+			.ui-form-item:nth-child(2n+1), .ui-form-item.old-number{
+				width: 70%;
+				&.form-item-full{
+					width: 100%;
+				}
+			}
+			.ui-form-item:nth-child(2n+2), .ui-form-item.even-number{
+				width: 30%;
+				&.form-item-full{
+					width: 100%;
+				}
+			}
+		}
+		&.form-unaverage-64{
+			.ui-form-item:nth-child(2n+1), .ui-form-item.old-number{
+				width: 60%;
+				&.form-item-full{
+					width: 100%;
+				}
+			}
+			.ui-form-item:nth-child(2n+2), .ui-form-item.even-number{
+				width: 40%;
+				&.form-item-full{
+					width: 100%;
+				}
+			}
+		}
+	}
+	/*三列表单样式*/
+	&.form-column-3{
+		.ui-form-item{
+			width: 33%;
+			float: left;
+			&.form-item-full{
+				width: 100%;
+			}
+		}
+	}
+	/*列表label文字自动撑长*/
+	&.form-text-auto{
+		.ui-form-item{
+			.clearfix();
+			.form-label{
+				float: left;
+				color: @color-gray-grade4;
+				width: auto;
+				position: relative;
+				&.form-label-default{
+					color: @color-gray-dark;
+				}
+			}
+			.form-block{
+				float: left;
+				display: inline-block;
+				margin: 0;
+			}
+		}
+		&.auto-fixed-label{
+			.ui-form-item{
+				.form-label{
+					width: 70px;
+				}
+			}
+		}
+	}
+	/*缩小表单行高*/
+	&.form-min{
+		.ui-form-item{
+			margin: 5px auto;
+			/*表单行高*/
+			@rowsHeight: 24px;
+			min-height: @rowsHeight;
+			.form-label{
+				height: @rowsHeight;
+				line-height: @rowsHeight;
+			}
+			.form-block{
+				min-height: @rowsHeight;
+				line-height: @rowsHeight;
+			}
+		}
+	}
+
+	&.form-column-none{
+		.ui-form-item{
+			width: auto;
+			float: left;
+		}
+	}
+}
+
+/*以下是表单定制样式*/
+.m-pwd-level{
+	display: block;
+	height: 20px;
+	margin: 5px auto;
+	margin-bottom: 0;
+	display: none;
+	.level-item{
+		display: inline-block;
+		float: left;
+		margin-right: 4px;
+		width: 40px;
+		height: 20px;
+		line-height: 20px;
+		.border-radius(4px);
+		text-align: center;
+		font-size: @font-size-base;
+		color: @color-white;
+		background: @color-gray-light-grade2;
+	}
+	&.level-weak{
+		.level-1{
+			background: @color-red;
+		}
+	}
+	&.level-commonly{
+		.level-1{
+			background: @color-red;
+		}
+		.level-2{
+			background: @color-red-grade1;
+		}
+	}
+	&.level-strong{
+		.level-1{
+			background: @color-red;
+		}
+		.level-2{
+			background: @color-red-grade1;
+		}
+		.level-3{
+			background: @color-green-light;
+		}
+	}
+}
+
+/*单选定制*/
+.m-radio-customized{
+	.layui-form-radio{
+		margin: 0px 10px 0 0px;
+		padding: 0 10px;
+		background: @color-white;
+		border: 1px solid @color-gray-light;
+		.border-radius(5px);
+		min-width: 104px;
+		text-align: center;
+		height: 38px;
+		line-height: 38px;
+		&.layui-form-radioed{
+			background: @color-green-light;
+			border: 1px solid @color-green-light;
+			color: @color-white;
+		}
+		.layui-anim.layui-icon{
+			font-size: 0;
+			display: none;
+		}
+	}
+}
+.m-radio-customized-type1{
+	.layui-form-radio{
+		margin: 0px 10px 0 0px;
+		padding: 0 10px 0 0;
+		background: none;
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		&.layui-form-radioed{
+			color: @color-green-light;
+		}
+		.layui-anim.layui-icon{
+			font-size: 0;
+			display: none;
+		}
+	}
+}
+.m-radio-customized-type2{
+	.layui-form-radio{
+		margin: 0px 10px 0 0px;
+		padding: 0 0px 0 26px;
+		background: none;
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+		background: url(../images/icon/icon-radio.png) 0 center no-repeat;
+		&.layui-form-radioed{
+			/* color: @color-green-light; */
+			background: url(../images/icon/icon-radio-active.png) 0 center no-repeat;
+		}
+		.layui-anim.layui-icon{
+			font-size: 0;
+			display: none;
+		}
+	}
+}
+
+/*复选框定制*/
+.m-checkbox-customized{
+	.layui-form-checkbox{
+		padding-right: 0;
+		border: none;
+		background: none;
+		&.layui-form-checked{
+			span{background: url(../images/icon/icon-checkbox-active.png) 0 center no-repeat;
+
+			}
+		}
+		span{
+			background: none;
+			color: @color-gray-dark;
+			font-size: @font-size-grade1;
+			padding-left: 24px;
+			background: url(../images/icon/icon-checkbox.png) 0 center no-repeat;
+		}
+		i{
+			font-size: 0;
+			display: none;
+		}
+	}
+}
+
+/*文本框*/
+.ui-input{
+    height: 38px;
+    line-height: 1.3;
+    line-height: 38px\9;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+    background-color: #fff;
+    .border-radius(2px);
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    .transition(all .4s ease);
+    &:hover, &.hover, &:focus, &.focus{
+    	border-color: #ccc;
+    }
+}
+
+/*日期组建样式*/
+.ui-datepicker{
+	@pRight: 32px;
+	display: inline-block;
+	padding-right: @pRight + 6px;
+	width: 210px - @pRight - 8px;
+	border: 1px solid #e6e6e6;
+	background: @color-white;
+	margin-right: 10px;
+	.border-radius(3px);
+	&.datepicker-short{
+		width: 120px - @pRight;
+	}
+	&.datepicker-full{
+		width: auto;
+	}
+	&.datepicker-long{
+		width: 290px - @pRight;
+	}
+	.ui-input{
+		border: none;
+		padding-right: @pRight - 12px;
+		background: url('@{bg-icon}icon-datepicker.png') right center no-repeat;
+		&.Validform_error{
+			border: none !important;
+		}
+	}
+}
+
+/*下拉定制*/
+.layui-form-select{
+	&.Validform_error{
+		.border-radius(3px);
+		.layui-select-title{
+			input{
+				border: none;
+			}
+		}
+	}
+}
+.layui-select-title{
+	.clearfix();
+	input{
+		.border-radius(3px);
+	}
+	i.layui-edge{
+		right: 7px;
+	}
+	&:before{
+		display: inline-block;
+		width: 26px;
+		height: 100%;
+		background: @color-gray-light-grade3;
+		position: absolute;
+		right: 0;
+		top: 0;
+		.border-right-radius(5px);
+	}
+	&:after{display: none;}
+}
+
+/*银行卡信息*/
+.m-bank-type{
+	display: inline-block;
+	width: 238px;
+	height: 58px;
+	border: 1px solid @color-gray-light;
+	.border-radius(5px);
+	position: relative;
+	padding-left: 70px;
+	.icon-bank{
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		margin-top: -25px;
+		width: 50px;
+		height: 50px;
+	}
+	.bank-number{
+		margin-top: 12px;
+		display: block;
+		font-size: @font-size-grade1;
+		color: @color-gray-dark;
+		.number{
+			display: inline-block;
+			margin-left: 10px
+		}
+	}
+	.bank-remark{
+		margin-top: 8px;
+		display: block;
+		font-size: @font-size-grade1;
+		color: @color-red;
+	}
+}
+
+input:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}

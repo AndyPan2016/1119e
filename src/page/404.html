@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1119贷-同城互联网金融平台</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/base.css" />
+</head>
+<body>
+	
+    <div class="wrapper">
+        <div class="page page-404">
+            <!-- 头部 -->
+            @@include('./include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+						<div class="error-page clearfix">
+			                <div class="error-img">
+			                    <p><img src="./assets/images/error-img.png" alt=""></p>
+			                    <div class="error-code">
+			                        <p class="f-30 pt-30 c-666 pb-15"><span class="error-num">404</span>ERROR</p>
+			                        <p class="c-666">(错误代码：DNS_PROBE_POSSIBLE)</p>
+			                    </div>
+			                </div>
+
+			                <div class="error-right">
+			                    <p class="f-24 pb-20">您访问的页面被外星人带走了！</p>
+			                    <p class="f-16 pb-20"><span class="f-24 c-orange2 mr-10" id="time">3</span>秒后您将</p>
+			                    <p><a href="#" class="green-btn-l">跳转到首页</a></p>
+			                </div>
+			            </div><!--/error-page-->
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+            <!-- 底部 -->
+            @@include('./include/footer.html',{"baseurl":"."})
+            <!-- 底部 -->
+        </div>
+        <!--/page-->
+    </div>
+    <!--/wrapper-->
+
+    <script type="text/javascript" src="./assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="./assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript">
+	    function delayURL() {
+	        var delay = document.getElementById("time").innerHTML;
+	        var t = setTimeout("delayURL()", 1000);
+	        if (delay > 0) {
+	            delay--;
+	            document.getElementById("time").innerHTML = delay;
+	        } else {
+	            clearTimeout(t);
+	            window.location.href = "index.html";
+	        }
+	    }
+    	delayURL();
+    </script>
+</body>
+</html>

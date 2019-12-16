@@ -1,0 +1,20 @@
+@import "_variables.less";
+@import "_mixins.less";
+
+.ui-pager{
+    text-align: center;
+    .layui-laypage-em{
+      background-color: @brand-primary !important;
+    }
+  }
+
+/*重写分页样式*/
+.py-page{text-align:center; margin-top:40px; padding-bottom:50px;}
+.py-page .display{color:#999;}
+.py-page label{font-weight:normal !important; color:#999;}
+.py-page .controller a{border: 1px solid #e5e5e5; color:#999; background:#fff;display: inline-block; height: 30px; line-height: 30px; margin-left: 5px; padding: 0px 10px; margin-bottom:10px;}
+.py-page .controller a:hover{background:#eee;}
+.py-page .controller .current{background:@brand-primary; border:1px solid #31c27c; color:#fff;}
+.py-page .controller .current:hover{background:#31c27c; border:1px solid #31c27c; color:#fff;}
+.py-page .display span{margin-left:10px;}
+.py-page span{display:inline-block;}

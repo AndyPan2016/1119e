@@ -1,0 +1,271 @@
+@import "_variables.less";
+@import "_mixins.less";
+
+.page-borrow{
+
+   .wrap-inner{
+        background: url('../images/banner-borrow.png') no-repeat center 0;
+        padding-top: 600px;
+   }
+
+   .m-borrowapply{
+        position: absolute;
+        width: 400px;
+        min-height: 100px;
+        background: @color-white;
+
+        top: 150px;
+        left: 50%;
+        margin-left: 200px;
+
+        .border-radius(4px);
+        overflow: hidden;
+
+       .ui-form-head{
+           height: 53px;
+           line-height: 53px;
+           color: @brand-primary;
+           text-align: center;
+           font-weight: bold;
+           border: 1px solid @border-color;
+       }
+
+       .ui-form-body{
+           padding: 20px 25px 10px 15px;
+       }
+
+       .ui-form-item{
+           .form-label{
+               width: 80px;
+           }
+
+           .form-block{
+               margin-left:96px
+           }
+
+           &.inputtext{
+                .form-input-wrap{
+                    width:262px
+                }
+           }
+       }
+
+       .ui-form-foot{
+           text-align: center;
+           margin:17px 0 40px 0;
+           border: none;
+
+           .ui-btn{
+               width: 180px;
+               text-align: center;
+           }
+       }
+    }
+
+    .m-borrowinfo{
+        width: 1200px;
+        margin: 0 auto; 
+        .hd{
+            .ui-title{
+                display: block;
+                width: 330px;
+                height: 163px;
+                margin: 0 auto;
+                background:#fff url(../images/s-borrow.png) no-repeat 0 0;
+            }
+        }
+    }
+
+    .m-borrowinfo_advantage{
+        margin-bottom: 80px;
+
+        .hd{
+            .ui-title{
+                background-position: -929px -124px;
+            }
+        }
+
+        .advantages{
+            .clearfix();
+
+            .ui-repeater-item{
+                display: block;
+                float: left;
+                width: 300px;
+                height: 420px;
+                padding:0 30px 0 30px;
+                margin-right:60px; 
+                .box-shadow(@shadow:0 0 30px rgba(153,153,153,0.2));
+
+                .transition(all .2s linear);
+ 
+                &:hover{
+                    .translate3d(0,-2px,0);
+                }
+
+               .icons{
+                    height: 300px;
+                    background: url('../images/s-borrow.png') no-repeat 31px 30px;
+                }
+
+                .intro{
+                    text-align: center;
+
+                    .ui-title{
+                        display: block;
+                        margin-bottom: 18px;
+                        font-size: @font-size-grade4;
+                        font-weight: bolder;
+                        color: @color-gray-dark;
+                    }
+
+                    .ui-text{
+                        font-size: @font-size-grade2;
+                        color:@color-gray-grade4;
+                        line-height: 120%;
+                    }
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                &:nth-child(2){
+                    .icons{
+                        background-position: -250px 30px;
+                    }
+                }
+
+                &:nth-child(3){
+                    .icons{
+                        background-position: -531px 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .m-borrowinfo_flow{
+        margin-top: 55px;
+        .hd{
+            .ui-title{
+                background-position: -830px 41px;
+            }
+        }
+        
+        .bd{
+            height: 200px;
+            .box-shadow(@shadow:0 0 30px rgba(153,153,153,0.2));
+            margin-bottom:100px;
+        }
+
+        .ui-step{
+            padding:30px 60px;
+            .clearfix();
+        }
+
+        .ui-step-item{
+            .size(102px,102px);
+            background:url('../images/s-borrow.png') no-repeat 0 -321px;
+            float: left;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #666;
+            padding-top: 124px;
+            .transition(all .2s linear);
+
+            &:nth-child(2n+1){
+                &:hover{
+                    .translate3d(0,-2px,0);
+                }
+            }
+
+            &:nth-child(2){
+                background-position-x: -122px;
+                margin: 0 20px;
+            }
+
+            &:nth-child(3){
+                background-position-x: -244px;
+            }
+
+            &:nth-child(4){
+                background-position-x: -366px;
+                margin: 0 20px;
+            }
+
+            &:nth-child(5){
+                background-position-x: -489px;
+            }
+
+            &:nth-child(6){
+                background-position-x: -615px;
+                margin: 0 20px;
+            }
+
+            &:nth-child(7){
+                background-position-x: -733px;
+            }
+
+            &:nth-child(8){
+                background-position-x: -853px;
+                margin: 0 20px;
+            }
+            &:nth-child(9){
+                background-position-x: -977px;
+            }
+        }
+
+        
+    }
+
+    .ui-separator_line{
+        position: relative;
+        width: @container-width;
+        height: 0px;
+        margin: 0 auto;
+        border-bottom: 1px solid @border-color;
+
+        &:after{
+            position: absolute;
+            display: block;
+            .size(8px,8px);
+            content: "";
+            left:50%;
+            top:-4px;
+            margin-left: -4px;
+            .border-radius(50%); 
+            background: @border-color;
+        }
+
+        &:before{
+            display: block;
+            position: absolute;
+            .size(60px,3px);
+            content: "";
+            left:50%;
+            top: -1px;
+            margin-left: -30px;
+            background: #fff;
+        }
+    }
+
+    .m-other{
+        text-align: center;
+        margin: 100px 0 118px 0;
+
+        .ui-btn-radiusborder{
+            display: inline-block;
+            height: 60px;
+            line-height: 60px;
+            font-size: @font-size-grade5;
+            color: @color-green-light;
+            border: 1px solid @brand-primary;
+            .border-radius(30px);
+            text-align: center;
+            padding: 0 60px;
+        }
+    }
+    
+}

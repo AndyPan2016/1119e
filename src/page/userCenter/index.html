@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200,  user-scalable=no">
+    <title>1119贷-同城互联网金融平台</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/page.usercenter.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page page-usercenter">
+            <!-- 头部 -->
+            @@include('../include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                        <div class="usercenter-wrap">
+                            <!--左边内容区域 start-->
+                            @@include('../include/uc.menus.html')
+                            <!--左边内容区域 end  -->
+
+                            <!--右边内容区域 start-->
+                            <div class="usercenter-right">
+                                <!--个人中心-个人信息 start-->
+                                <div class="m-userInformation">
+                                    <div class="ui-userportrait user-floatLeft"><img src="../assets/images/man-portrait.png"></div>
+                                    <div class="m-userInformation-text user-floatLeft">
+                                        <div class="ui-username">
+                                            <h3 class="name">186*****831, 您好</h3>
+                                            <i class="identification">普通会员</i>
+                                        </div>
+                                        <div class="m-authentication">
+                                            <p class="ui-text">认证信息:</p>
+                                            <ul class="ui-repeater">
+                                                <li class="ui-repeater-item"><i class="icon icon-phone authentication-icon"></i></li>
+                                                <li class="ui-repeater-item"><i class="icon icon-people authentication-icon"></i></li>
+                                                <li class="ui-repeater-item"><i class="icon icon-lock authentication-icon"></i></li>
+                                                <li class="ui-repeater-item"><i class="icon icon-loca authentication-icon"></i></li>
+                                                <li class="ui-repeater-item"><i class="icon icon-unionpay authentication-icon"></i></li>
+                                                <li class="ui-repeater-item"><i class="icon icon-mail authentication-icon icon-bluelight"></i></li>
+                                            </ul>
+                                            <a class="ui-link" href="#">【立即提升】</a>
+                                        </div>
+                                        <div class="ui-register">注册日期：2014-08-08</div>
+                                        <div class="ui-linkvip"><a class="ui-link">升级VIP，享受更多特权和保障</a></div>
+                                    </div>
+                                    <div class="m-user-integral user-floatRight">
+                                        <sapn class="ui-user-integral">
+                                            <h2 class="user-integral-number">1123123</h2><em class="user-integral-company">分</em>
+                                        </sapn>
+                                        <a class="goto-integral" href="#">【去赚积分】</a>
+                                        <a class="receive-integral" href="#">签到领积分+200</a>
+                                    </div>
+                                    <div class="ui-btn-green-circle user-green-notice">我的积分</div>
+                                </div>
+                                <!--个人中心-个人信息 end  -->
+
+                                <!-- 收益区域 start -->
+                                <div class="income-area">
+                                    <div class="income-item income-item-1 number-style">
+                                        <h2>可用余额(元) <a href="javascript:;" id="m-eyes"><i class="icon icon-look"></i></a></h2>
+                                        <p class="eye-val" data-account="1119.00">1119.00</p>
+                                    </div>
+                                    <div class="income-item income-item-2 number-style">
+                                        <h2>冻结金额(元)</h2>
+                                        <p class="eye-val" data-account="1119.00">1119.00</p>
+                                    </div>
+                                    <div class="income-item income-item-3 number-style">
+                                        <h2>累计净收益(元)</h2>
+                                        <p class="eye-val" data-account="582000.00">582000.00</p>
+                                    </div>
+                                    <div class="income-item income-item-4">
+                                        <a href="#" class="ui-btn-yellow-gradients">立即充值</a>
+                                        <a href="#" class="ui-btn-blue-gradients">提现到账</a>
+                                    </div>
+                                </div>
+                                <!-- 收益区域 end   -->
+
+                                <!-- 我的投资 start -->
+                                <div class="my-invest-area">
+                                    <div class="icon-tit"><i class="icon icon-invest"></i>我的投资</div>
+                                    <div class="invest-wrap">
+                                        <div class="invest-left">
+                                            <div class="left number-style">
+                                                <h2>待收取本金(元)</h2>
+                                                <p class="eye-val" data-account="112320.00">112320.00</p>
+                                            </div>
+                                            <div class="middle number-style">
+                                                <h2>待收取利息(元)</h2>
+                                                <p class="eye-val" data-account="112320.00">112320.00</p>
+                                            </div>
+                                            <div class="invest-handle">
+                                                <a href="#" class="ui-btn-yellow-gradients">我要收款</a>
+                                            </div>
+                                        </div>
+                                        <ul class="invest-list">
+                                            <li>
+                                                <div>待收资产</div>
+                                                <div>待收本金</div>
+                                                <div>待收利息</div>
+                                            </li>
+                                            <li class="yellow-round">
+                                                <div>玖安卫士</div>
+                                                <div>100,000元</div>
+                                                <div><span>100,000元</span></div>
+                                            </li>
+                                            <li class="blue-round">
+                                                <div>玖安定投</div>
+                                                <div>100,000元</div>
+                                                <div><span>100,000元</span></div>
+                                            </li>
+                                            <li class="green-round">
+                                                <div>玖玖惠金</div>
+                                                <div>100,000元</div>
+                                                <div><span>100,000元</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/invest-wrap-->
+                                </div>
+                                <!-- 我的投资 end  -->
+
+
+                                <!-- 收益统计 start -->
+                                <div class="income-statistics">
+                                    <div class="icon-tit"><i class="icon icon-statistics"></i>收益统计</div>
+                                    <div class="income-statistics-wrap">
+                                        <div class="echart-wrap" id="j-echart-wrap">
+                                            <div class="hd-type" id="j-hd-type">
+                                                <div class="profit-type" id="j-profit-type">
+                                                    收益类型：
+                                                    <a href="javascript:;" class="profit-type-item active" key="profit1">合计</a>
+                                                    <a href="javascript:;" class="profit-type-item" key="profit2">本金</a>
+                                                    <a href="javascript:;" class="profit-type-item" key="profit3">利息</a>
+                                                </div>
+                                                <div class="date-type" id="j-date-type">
+                                                    时间：
+                                                    <a href="javascript:;" class="profit-type-item active" key="date1">本月</a>
+                                                    <a href="javascript:;" class="profit-type-item" key="date2">本季度</a>
+                                                    <a href="javascript:;" class="profit-type-item" key="date3">本年</a>
+                                                </div>
+                                            </div>
+                                            <div class="echart-cont" id="j-echart-cont"></div>
+                                        </div>
+                                    </div>
+                                    <!--/invest-wrap-->
+                                </div>
+                                <!-- 收益统计 end  -->
+
+                                <!--收款明细 start-->
+                                <div class="m-cheques">
+                                    <div class="m-user-titleIcon">
+                                        <div class="ui-user-titleIcon-left">
+                                            <i class="icon icon-dollar ui-colorGreen"></i>
+                                            <h4 class="ui-user-titleH4">收款明细</h4>
+                                        </div>
+                                        <div class="ui-user-titleIcon-right">
+                                            <p class="ui-righttext">时间 ：</p>
+                                            <a class="link primary" href="#">近一月</a>
+                                            <a class="link" href="#">近三月</a>
+                                            <a class="more-link gray-999" href="#">更多>></a>
+                                        </div>
+                                    </div>
+                                    <div class="m-userTable">
+                                        <div class="ui-table">
+                                            <div class="table-body">
+                                                <table class="layui-table">
+                                                    <colgroup>
+                                                        <col width="150">
+                                                        <col width="200">
+                                                        <col>
+                                                    </colgroup>
+                                                    <thead class="theader">
+                                                        <tr>
+                                                            <th>借款标</th>
+                                                            <th>投资金额</th>
+                                                            <th>账期</th>
+                                                            <th>应收总额</th>
+                                                            <th>应收本金</th>
+                                                            <th>应收利息</th>
+                                                            <th>服务费</th>
+                                                            <th>收益</th>
+                                                            <th>状态</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-green">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>玖安定投-1001</td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                                <p>2018-04-05
+                                                                    <br>（第二期）</p>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>¥100,000</td>
+                                                            <td>
+                                                            </td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥0</td>
+                                                            <td>¥821.92</td>
+                                                            <td>¥82.19</td>
+                                                            <td>¥739.73</td>
+                                                            <td class="color-red">未收</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="j-test-pager" class="ui-pager"></div>
+                                </div>
+                                <!--收款明细 end-->
+                            </div>
+                            <!--右边内容区域 end  -->
+                        </div>
+                        <!--/usercenter-wrap-->
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+
+            <!-- 底部 -->
+            @@include('../include/footer.html',{"baseurl":".."})
+            <!-- 底部 -->
+        </div>
+        <!--/page-->
+    </div>
+    <!--/wrapper-->
+
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/swiper.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/echarts.common.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+    <script type="text/javascript" src="../assets/scripts/page.usercenter.js"></script>
+
+    <script>
+        var popup = CompPopup();
+        var mypager = CompPager();
+        var pager = mypager.render({
+            //指定元素
+            target: '#j-test-pager',
+            //数据总数，从服务端得到
+            total: 50,
+            //每页显示的条数
+            pageCount: 10
+        });
+    </script>
+</body>
+
+</html>

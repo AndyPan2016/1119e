@@ -1,0 +1,156 @@
+/**
+ * 图标
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-05-05 14:17:54
+ */
+@import "_mixins.less";
+
+
+/**
+ * 背景图标
+ * @path: 背景图标路径，不包括后缀名
+ * @width: 图标元素宽度
+ * @height: 图标元素高度
+ */
+.fn-icon(@name){
+    background: url('@{bg-icon}@{name}') no-repeat;
+}
+
+.icon-success{
+	.fn-icon('icon-tip-success.png');
+	padding-left: 30px;
+	background-position: 0 center;
+}
+
+/*头部公告*/
+.icon-notice{
+	.fn-icon('icon-notice.png');
+	padding-left: 30px;
+	background-position: 0 center;
+}
+/*头部积分商城*/
+.icon-integral{
+	//.fn-icon('icon-integral.png');
+	//padding-left: 24px;
+	//background-position: 0 center;
+}
+/*头部app下载*/
+.icon-download-app{
+	.fn-icon('icon-download-app.png');
+	padding-left: 20px;
+	background-position: 0 center;
+}
+
+/*头部我的账户*/
+.icon-my-account{
+	.fn-icon('icon-my-account.png');
+	padding-left: 36px;
+	background-position: 0 center;
+}
+
+/*头部站点*/
+.icon-site-up{
+	.fn-icon('icon-select-up.png');
+	padding: 0 10px;
+	padding-right: 24px;
+	background-position: 90% center;
+}
+.icon-site-down{
+	.fn-icon('icon-select-down.png');
+	padding: 0 10px;
+	padding-right: 24px;
+	background-position: 90% center;
+
+	&.up{
+		.fn-icon('icon-select-up.png');
+		padding: 0 10px;
+		padding-right: 24px;
+		background-position: 90% center;
+	}
+}
+
+/*底部图标*/
+.icon-badge{
+	padding-left: 25px;
+	.fn-icon('icon-badge.jpg');
+	background-position: 0 center;
+}
+.icon-credit{
+	padding-left: 25px;
+	.fn-icon('icon-credit.png');
+	background-position: 0 center;
+}
+.icon-register-circles{
+	padding-left: 25px;
+	.fn-icon('icon-register-circles.png');
+	background-position: 0 center;
+}
+
+.icon-bank-keep{
+	padding-left: 68px;
+	.fn-icon('icon-bank-keep.png');
+	background-position: 0 2px;
+	.transition(all .2s linear);
+	&:hover{
+		background-position: 0 0px;
+	}
+}
+.icon-safety-guarantee{
+	padding-left: 68px;
+	.fn-icon('icon-safety-guarantee.png');
+	background-position: 0 2px;
+	.transition(all .2s linear);
+	&:hover{
+		background-position: 0 0px;
+	}
+}
+.icon-accord-rule{
+	padding-left: 68px;
+	.fn-icon('icon-accord-rule.png');
+	background-position: 0 2px;
+	.transition(all .2s linear);
+	&:hover{
+		background-position: 0 0px;
+	}
+}
+.icon-healthy-profit{
+	padding-left: 68px;
+	.fn-icon('icon-healthy-profit.png');
+	background-position: 0 2px;
+	.transition(all .2s linear);
+	&:hover{
+		background-position: 0 0px;
+	}
+}
+
+.icon-guardians-hd{
+	padding-left: 26px;
+	.fn-icon('icon-guardians-hd.png');
+	background-position: 0 center;
+}
+.icon-guardians-money{
+	padding-left: 26px;
+	.fn-icon('icon-guardians-money.png');
+	background-position: 0 center;
+}
+.icon-card-tip{
+	min-height: 88px;
+	padding-left: 108px;
+	.fn-icon('icon-card-tip.png');
+	background-position: 0 0;
+}
+
+.icon-popup-success{
+	padding-top: 134px;
+	.fn-icon('popup-tip-success.png');
+	background-position: center 20px;
+}
+.icon-popup-fail{
+	padding-top: 134px;
+	.fn-icon('popup-tip-fail.png');
+	background-position: center 20px;
+}
+.icon-tip-soon{
+	.fn-icon('icon-tip-soon.png');
+	background-position: center center;
+}

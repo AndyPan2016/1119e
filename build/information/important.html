@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1119贷-同城互联网金融平台</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/page.information.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page page-information">
+            <!-- 头部 -->
+            <meta name="viewport" content="width=1200,  user-scalable=no">
+<div class="header">
+    <div class="header-top">
+        <div class="header-wrap">
+            <label class="header-top-item">客服热线:400-610-1119 ( 9:00-17:30 )</label>
+            <span class="header-top-item">
+                <a href="javascript:;" class="header-login-regist" id="j-btn-popup-login">登录</a>|
+                <a href="../register.html" class="header-login-regist">注册</a>
+            </span>
+            <span class="header-tools">
+                <a href="javascript:;" class="tools-item"><i class="icon icon-trumpet-2"></i>公告</a>
+                <a href="../mall/" class="tools-item "><i class="icon icon-integral"></i>积分商城</a>
+                <a href="javascript:;" class="tools-item"><i class="icon icon-phone-2"></i>下载移动客户端</a>
+                <a href="javascript:;" class="tools-item">帮助中心</a>
+                <a href="javascript:;" class="tools-item">新手指引</a>
+                <a href="javascript:;" class="tools-item">关注我们</a>
+                <a href="javascript:;" class="tools-item">风险教育</a>
+            </span>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="header-wrap">
+            <a href="/index.html" class="header-logo"></a>
+            <span class="header-site-area" id="j-nav-site">
+                <a href="javascript:;" class="site-area icon-site-down">
+                    重庆站
+                </a>
+                <div class="site-area-list">
+                    <a href="javascript:;" class="site-area-item">重庆站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">昆明站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">江苏站 &gt;</a>
+                </div>
+            </span>
+            <span class="nav-wrap">
+                <a href="/" class="nav-item active">首页</a>
+                <span class="nav-item caret">
+                    <a class="nav-item-text" href="/borrow.html">我要投资</a>
+                    <span class="nav-caret-list">
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                    </span>
+                </span>
+                <a href="/investment/list.html" class="nav-item">我要借款</a>
+                <a href="/information/" class="nav-item">信息披露</a>
+                <a href="/about/introduction.html" class="nav-item">关于我们</a>
+            </span>
+            <a href="/usercenter/" class="nav-my-account icon-my-account">我的账户</a>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框的DOM结构必须放在fn-popup-hide容器中 -->
+<div class="fn-popup-hide">
+    <!-- 登录 -->
+    <div class="popup-login" id="j-popup-login">
+        <form class="ui-form form-login" id="j-form-login">
+            <div class="ui-form-head">
+                <h3 class="ui-title">登录您的账户</h3>
+                <div>请输入您的用户名，密码和验证码</div>
+            </div>
+            <div class="ui-form-body">
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-user-2"></i>
+                        <input type="text"  name="name" class="inputxt" placeholder="请输入用户名" datatype="s6-18" nullmsg="用户名不能为空" errormsg="昵称至少6个字符,最多18个字符！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"><span>
+                </div>
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-lock-2"></i>
+                        <input type="password" name="password" placeholder="请输入登录密码" nullmsg="请输入登录密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item checkcode">
+                    <span class="ui-input">
+                        <input type="text" placeholder="验证码" placeholder="请输入验证码" nullmsg="请输入验证码" datatype="*4"  errormsg="验证码输入错误" autocomplete="off"/>
+                    </span>
+                    <span class="ui-img">
+                        <img src="#" alt="" />
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item others">
+                    <a href="#" class="ui-link">找回密码</a>
+                    <span></span>
+                    <a href="#" class="ui-link">激活账号</a>
+                </div>
+                <div class="ui-form-item operate">
+                    <input type="submit" class="ui-btn ui-btn-green-gradients j-btn-login" value="立即登录"/>
+                </div>
+            </div>
+            <div class="ui-form-foot">
+                <span class="login-qq">QQ账号登录</span>
+                <span class="login-reg">新用户，
+                    <a href="#" class="ui-link">免费注册</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <!-- 登录 -->
+</div>
+
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                        <div class="information-wrap">
+                            <!--左边内容区域 start-->
+                           <div class="col-left">
+                               <ul class="about-menu">
+                                   <li><a href="index.html">备案信息</a></li>
+                                   <li><a href="group.html">组织信息</a></li>
+                                   <li><a href="platform.html">平台信息</a></li>
+                                   <li><a href="manage.html">经营信息</a></li>
+                                   <li><a href="audit.html">审核信息</a></li>
+                                   <li><a href="important.html" class="active">重大事项</a></li>
+                                   <li><a href="law.html">法律法规</a></li>
+                                   <li><a href="javascript:;">法人签章</a></li>
+                               </ul>
+                           </div>
+                            <!--左边内容区域 end  -->
+
+                            <!--右边内容区域 start-->
+                            <div class="col-right">
+                                <!-- 选项卡区域 start -->
+                                <div class="ui-tabs j-tabs" id="j-tabs">
+                                    <ul class="ui-tabs-hd">
+                                        <li class="tabs-hd-item j-tabs-hd-item active first"><span></span>重大事项</li>
+                                    </ul>
+                                    <div class="ui-tabs-bd">
+                                        <div class="tabs-bd-item j-tabs-cont-item active">
+                                            <div class="content information-content">
+                                                <!--table-->
+                                                <div class="ui-table">
+                                                    <div class="table-body">
+                                                        <table class="layui-table">
+                                                            <colgroup>
+                                                                <col width="70%">
+                                                                <col width="30%">
+
+                                                            </colgroup>
+                                                            <thead class="theader">
+                                                                <tr>
+                                                                    <th class="t-l">重大事项</th>
+                                                                    <th>披露</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                                <tr>
+                                                                    <td class="t-l">公司减资、合并、分立、解散或申请破产</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">公司依法进入破产程序</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">公司被责令停业、整顿、关闭</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">公司涉及重大诉讼、仲裁或涉嫌违法违规被有权机关调查，或受到刑事处罚、重大行政处罚</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">公司法定代表人、实际控制人、主要负责人、董事、监事、高级管理人员涉及重大诉讼、仲裁
+                                                                        或涉嫌违法违规被有权机关调查，或受到刑事处罚、重大行政处理，或被采取强制措施</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">公司主要或者全部业务陷入停顿</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="t-l">存在欺诈、损害出借人利益等其他影响网络借贷信息中介机构经营活动的重大事项</td>
+                                                                    <td>无</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--table-->
+                                            </div><!--/content-->
+                                        </div><!--/tabs-bd-item-->
+
+                                    </div><!--/ui-tabs-bd-->
+                                </div>
+                                <!-- 选项卡区域 end   -->
+                            </div>
+                            <!--右边内容区域 end  -->
+                        </div>
+                        <!--/about-wrap-->
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+
+            <!-- 底部 -->
+            <div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-base-info">
+            <span class="footer-base-item">
+                <label class="info-item-title">关于我们</label>
+                <a href="javascript:;" class="info-item-link">企业管理</a>
+                <a href="javascript:;" class="info-item-link">业绩报告</a>
+                <a href="javascript:;" class="info-item-link">平台数据</a>
+                <a href="javascript:;" class="info-item-link">活动专区</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">安全保障</label>
+                <a href="javascript:;" class="info-item-link">信息披露</a>
+                <a href="javascript:;" class="info-item-link">银行存管</a>
+                <a href="javascript:;" class="info-item-link">风险管理</a>
+                <a href="javascript:;" class="info-item-link">法律法规</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">用户中心</label>
+                <a href="javascript:;" class="info-item-link">新手指引</a>
+                <a href="javascript:;" class="info-item-link">我的账户</a>
+                <a href="javascript:;" class="info-item-link">帮助中心</a>
+                <a href="javascript:;" class="info-item-link">关于我们</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">服务产品</label>
+                <a href="javascript:;" class="info-item-link">我要投资</a>
+                <a href="javascript:;" class="info-item-link">我要借款</a>
+                <a href="javascript:;" class="info-item-link">产品介绍</a>
+                <a href="javascript:;" class="info-item-link">收费规则</a>
+            </span>
+
+            <span class="footer-qr-code">
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">关注微信公众号</label>
+                </span>
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">下载APP投资</label>
+                </span>
+            </span>
+
+            <span class="footer-contact-info">
+                <label class="contact-info-title">全国统一服务热线：</label>
+                <label class="contact-info-phone">400-610-1119</label>
+                <label class="contact-info-title">公司地址：</label>
+                <label class="contact-info-address">重庆市渝北区黄山大道两江星界3栋10-4</label>
+            </span>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-friendly-link">
+                友情链接：
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">观世纪</a>
+                <a href="javascript:;" class="friendly-link-item">早导网</a>
+                <a href="javascript:;" class="friendly-link-item">网贷之家</a>
+                <a href="javascript:;" class="friendly-link-item">天眼网贷</a>
+            </div>
+            <div class="footer-copyright-record">
+                <label class="copyright">Copyright © 2016 1119贷版权所有</label>
+                <label class="record-num">渝ICP备13008087号</label>
+            </div>
+        </div>
+    </div>
+    <div class="footer-record-info">
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe01.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe02.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe03.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe04.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe05.png" alt=""></a>
+    </div>
+</div>
+
+            <!-- 底部 -->
+        </div>
+        <!--/page-->
+    </div>
+    <!--/wrapper-->
+
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/swiper.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/echarts.common.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+
+    <script>
+        $(function() {
+            //调用CompTabs组件
+            var tabs = CompTabs({
+                target: $('#j-tabs')
+            });
+            //自定义选项卡组件的切换事件
+            tabs.on('switch', function(target, thisItem, idx){
+                console.info(idx);
+            });
+        })
+    </script>
+</body>
+
+</html>

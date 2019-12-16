@@ -1,0 +1,13 @@
+<div id="j-pager-custom" class="ui-pager"></div>
+<script>
+    var popup = CompPopup();
+    var mypager = CompPager();
+    var pager = mypager.render({
+        //指定元素
+        target: '#j-pager-custom',
+        //数据总数，从服务端得到
+        total: 50,
+        //每页显示的条数
+        pageCount: 10
+    });
+</script>

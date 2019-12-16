@@ -1,0 +1,452 @@
+/**
+ * 表单
+ * @authors guoba (neo_z@outlook.com)
+ * @date    2018年5月21日
+ */
+
+@import "_variables.less";
+@import "_mixins.less";
+
+.ui-form{
+    .ui-form-item{
+        position: relative;
+        margin: 0;
+
+        input{
+
+            &:-webkit-autofil{
+                background:#fff;
+                color:#000;
+            }
+        }
+
+        
+        .ui-input{
+            display: block;
+            width:100%;
+            height: 40px;
+            padding:0;
+            line-height: 40px;
+            border:1px solid @border-color;
+            .border-right-radius(4px);
+            overflow: hidden;
+
+            input{
+                width: 242px;
+                height: 36px;
+                line-height: 36px;
+                padding: 0 10px;
+                border: none !important;
+                background: #fff;
+                overflow: hidden;
+                border: none;
+                outline: none;
+                resize: none;
+            }
+
+            .icon{
+                display:block;
+                width: 40px;
+                height: 40px;
+                float: left;
+                text-align: center;
+                color: #bfbfbf;
+                background:#f3f3f3;
+                border-right:1px solid @border-color;
+            }
+        }
+        
+
+        &.checkcode{
+            position: relative;
+
+            .ui-input{
+                width: 179px;
+                padding:0 12px;
+                .border-radius(4px);
+                
+                input{
+                    width: 100%;
+                }
+            }
+
+            .ui-img{
+                display: block;
+                width: 83px;
+                height: 40px;
+                position: absolute;
+                background: #f3f3f3;;
+                top: 0px;
+                right: 0px;
+                
+                img{
+                    width: 100%;
+                }
+            }
+
+            .Validform_checktip{
+                position: absolute;
+                left:0px;
+            }
+        }
+
+        &.others{
+            margin: 20px 0 5px;
+            height: 20px;
+            padding: 0px;
+            line-height: 20px;
+            text-align: right;
+            color:@color-gray-grade4;
+
+            .ui-link{
+                color:@color-gray-grade4;
+
+                font-size: @font-size-grade1;
+            }
+        }
+
+        &.operate{
+            text-align: center;
+            
+            .ui-btn{
+                width: 306px;
+            }
+        }
+    }
+}
+
+.page-login{
+    .container-sticky-wrap{
+        background: #333;
+    }
+
+   .wrap-inner{
+        background: url('../images/bg-login.png') no-repeat center top;
+        height: 521px;
+   }
+
+   .form-login{
+       position: absolute;
+       width: 346px;
+       min-height: 100px;
+       background: @color-white;
+       overflow: hidden;
+
+       top: 140px;
+       left: 50%;
+       margin-left: 254px;
+
+       .border-radius(4px);
+       overflow: hidden;
+
+       .ui-form-head{
+           height: 53px;
+           line-height: 53px;
+           color: @brand-primary;
+           text-align: center;
+           font-weight: bold;
+           border: 1px solid @border-color;
+       }
+
+       .ui-form-body{
+           padding:35px 20px 30px 20px;
+           border-bottom: 1px solid @border-color;
+           .ui-form-item{
+                input{   
+                    padding: 0;
+                    margin: 0;
+                    outline: none;
+                    border: none;
+                }
+           }
+       }
+
+       .ui-form-foot{
+           display: block;
+           padding: 10px 20px; 
+           color: @color-gray-dark;
+           font-size: @font-size-base;
+           .clearfix();
+
+            span{
+                display:block;
+                height: 30px;
+                line-height: 30px;
+                padding-left:26px;
+            }
+
+            .ui-link{
+                color:@brand-primary;
+            }
+
+           .login-qq{
+                background: url('../images/s-login.png') no-repeat 0 5px;
+                float: left;
+           }
+
+           .login-reg{
+                background: url('../images/s-login.png') no-repeat -23px -22px;
+                float: right;
+            }
+       }
+
+       .ui-form-item{
+        
+            .ui-input{
+                input{
+                    padding-left:12px;
+                }
+            }
+
+           .Validform_checktip{
+               display: block;
+               padding: 4px 0 4px 20px;
+               height: 12px;
+               font-size: 12px;
+               line-height: 12px;
+               background-size: 12px 12px;
+           }
+       }
+   }
+}
+
+.page-register{
+
+    .m-signin{
+        width: 1000px;
+        margin: 20px auto 0 auto;
+
+        .signin-head{
+            position: relative;
+            height: 56px;
+            line-height: 56px;
+            border-bottom: 1px solid @border-color;
+
+            .ui-title{
+                color: @brand-primary;
+                font-size: @font-size-grade3;
+                font-weight: bolder;
+            }
+            
+            .ui-text{
+                display: block;
+                position: absolute;
+                font-size: @font-size-grade1;
+                color: @color-gray-dark;
+                top: 0px;
+                right: 0px;
+            }
+
+            .ui-link{
+                color: @brand-primary;
+            }
+        }
+        
+        .ui-steps{
+            margin-top: 30px;
+            .clearfix();
+        }
+
+        .ui-step{
+            position: relative;
+            width: 72px;
+            font-size: @font-size-base;
+            text-align: center;
+            background: #fff;
+            color: @color-gray-grade4;
+            float: left;
+
+            .no{
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: relative;
+                left: 50%;
+                margin-left: -12.5px;
+                margin-bottom: 16px;
+                line-height: 25px;
+                font-size:@font-size-grade1;
+                color: #fff;
+                background: url('../images/s-register.png') no-repeat 0 0;
+            }
+
+            &:first-child{
+                margin-right: 404px;
+            }
+            
+            &:last-child{
+                width:48px;
+                margin-left: 404px;
+            }
+            
+            &.active{
+                color: #5cb85c;
+                .no{
+                    background: url('../images/s-register.png') no-repeat  -30px -50px;
+                }
+            }
+
+            &:before{
+                display: block;
+                position: absolute;
+                width: 410px;
+                height: 25px;
+                content: "";
+                background: url('../images/s-register.png') repeat-x 0 -133px;
+                z-index: 2;
+                left: 58px;
+            }
+
+            &:after{
+                display: block;
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                content: "";
+                background: url(../images/s-register.png) repeat-x -75px -91px;
+                z-index: 2;
+                left: 476px;
+                top: -2px;
+            }
+
+            &:first-child{
+                &:before{
+                    width: 425px;
+                }
+                &:after{
+                    left: 488px;
+                }
+            }
+
+            &:last-child{
+                &:after,&::before{
+                    display: none;
+                }
+            }
+        }
+
+        .ui-form{
+            margin-top:30px;
+            width: 400px;
+        }
+
+        .ui-form-item{
+            position: relative;
+            margin-bottom:18px;
+
+            .form-label{
+                width: 100px;
+            }
+
+            .form-block{
+                margin-left: 110px;
+
+                .ui-text{
+                    line-height: 40px;
+                }
+            }
+
+            .form-block-short{
+                .form-input-wrap{
+                    width:197px;     
+                }
+            }
+
+            .form-input-wrap{
+                width: 291px;
+            }
+
+            .Validform_checktip{
+                position: absolute;
+                left: 420px;
+                height: 38px;
+                line-height: 38px;
+                width: 100%;
+                top: 0px;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+            &.checkcode{
+                .layui-input{
+                    width: 197px;
+                }
+
+                .ui-img{
+                    display: block;
+                    width: 83px;
+                    height: 40px;
+                    position: absolute;
+                    background: #f3f3f3;;
+                    top: 0px;
+                    right: 0px;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.userchecked{
+                .layui-unselect span{
+                    font-size: 12px;
+                }
+
+                .form-block{
+                    position: absolute;
+                    width: 360px;
+                }
+            }
+
+            &.smscode{
+                position: relative;
+                .form-input-wrap{
+                    width: 194px;
+                }
+                .layui-input{
+                    width: 194px;
+                }
+                .ui-btn{
+                    padding:0 8px;
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                }
+            }
+
+            &.operate{
+                margin:22px 0 52px 0;
+                .ui-btn{
+                    border: none;
+                    width: 100%;
+                }
+            }
+        }
+
+        .ui-tip{
+            text-align: center;
+            margin-top: 50px;
+            color:@color-gray-grade1;
+
+            .ui-title{
+                margin-bottom: 12px;
+                font-size: @font-size-grade3;
+            }
+            .ui-text{
+                font-size: @font-size-grade1;
+            }
+
+            .operate{
+                margin: 30px 0 80px 0;
+
+                .ui-btn{
+                    width: 400px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+<!-- 选项卡区域 start -->
+<div class="ui-tabs j-tabs" id="j-tabs">
+    <ul class="ui-tabs-hd">
+        <li class="tabs-hd-item j-tabs-hd-item active first"><span></span>我的积分</li>
+        <li class="tabs-hd-item j-tabs-hd-item"><span></span>积分订单</li>
+    </ul>
+    <div class="ui-tabs-bd">
+        <div class="tabs-bd-item j-tabs-cont-item active">
+            <div class="content">
+                1
+            </div><!--/content-->
+        </div><!--/tabs-bd-item-->
+        <div class="tabs-bd-item j-tabs-cont-item">
+            <div class="content">2</div>
+        </div><!--/tabs-bd-item-->
+    </div><!--/ui-tabs-bd-->
+</div>
+<!-- 选项卡区域 end   -->
+
+<script>
+    $(function() {
+        //调用CompTabs组件
+        var tabs = CompTabs({
+            target: $('#j-tabs')
+        });
+        //自定义选项卡组件的切换事件
+        tabs.on('switch', function(target, thisItem, idx){
+            console.info(idx);
+        });
+    })
+</script>

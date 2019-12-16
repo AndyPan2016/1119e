@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/**
+ * 弹出框样式重置
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018年5月18日11:26:44;
+ */
+
+@import "_mixins.less";
+
+.fn-popup-hide{
+	font-size: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+body .layui-layer{
+	.border-radius(6px);
+	overflow: hidden;
+	.layui-layer-title{
+		background: @color-white;
+		font-size: 16px;
+		label{
+			display: inline-block;
+			position: relative;
+			height: 42px;
+			line-height: 42px;
+			cursor: move;
+			.clearfix();
+			&:before{
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background: @color-green-light;
+			}
+		}
+	}
+	.layui-layer-setwin{
+		/* top: 21px; */
+		top: 10px;
+		.layui-layer-ico{
+			width: 24px;
+			height: 24px;
+			background: url(../images/icon/icon-popup-close.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+	}
+}
+
+
+
+
+
+.appointment-product{
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 10px;
+
+	.ui-btn-yellow-gradients{
+		margin-top: 20px;
+		width: 50%;
+	}
+}
+
+.confirm-investment{
+	width: 500px;
+	.investment-title{
+		text-align: left;
+		font-size: @font-size-grade2;
+		color: @color-gray-dark;
+		.text-overflow();
+		margin-top: 26px;
+		margin-bottom: 6px;
+		padding-left: 20px;
+		font-weight: bold;
+	}
+	.ui-form{
+		width: 450px;
+		margin: 0 auto;
+	}
+	.confirm-investment-form{
+		border-top: 1px solid @color-gray-light-grade3;
+
+	}
+	.go-recharge{
+		display: inline-block;
+		margin-left: 20px;
+		font-size: @font-size-grade1;
+		color: @brand-primary;
+		outline: none;
+		text-decoration: underline;
+	}
+
+	.ui-btn-yellow-gradients{
+		margin-top: 20px;
+		width: 50%;
+	}
+}
+
+.bind-card-tip{
+	width: 650px;
+	margin: 0 auto;
+	.card-tip-wrap{
+		margin-top: 40px;
+		text-align: left;
+		font-size: @font-size-grade1;
+		color: @color-gray-grade1;
+		line-height: 24px;
+		.tip-title{
+			font-size: @font-size-grade2;
+			color: @color-gray-dark;
+			margin-bottom: 10px;
+		}
+		.tip-cont{
+		}
+		.tip-remark{
+			color: @color-red;
+		}
+	}
+	.tip-title-wrap{
+		text-align: center;
+		margin: 28px auto;
+		.title-text{
+			font-size: @font-size-grade2;
+			color: @color-gray-dark;
+			position: relative;
+			background: @color-white;
+			.clearfix();
+			&:before{
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -1px;
+				width: 160%;
+				margin-left: -80%;
+				border-top: 1px solid @color-gray-light;
+				z-index: -1;
+			}
+		}
+	}
+	.table-body{
+		height: 290px;
+		overflow-y: auto;
+		.layui-table{
+			text-align: center;
+			th{
+				text-align: center;
+				border: 0;
+				padding: 0;
+				height: 52px;
+				line-height: 52px;
+			}
+			td{
+				border: 0;
+				border-bottom: 1px solid @color-gray-light-grade3;
+				padding: 0;
+				height: 52px;
+				line-height: 52px;
+			}
+		}
+	}
+	.ui-btn-yellow-gradients{
+		display: block;
+		width: 260px;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 45px;
+	}
+}
+
+
+.card-tip-wrap, .popup-tip-wrap{
+	margin-top: 40px;
+	text-align: left;
+	font-size: @font-size-grade1;
+	color: @color-gray-grade1;
+	line-height: 24px;
+	.tip-title{
+		font-size: @font-size-grade2;
+		color: @color-gray-dark;
+		margin-bottom: 10px;
+	}
+	.tip-cont{
+	}
+	.tip-remark{
+		color: @color-red;
+	}
+}
+
+.popup-tip-wrap{
+	width: 292px;
+	margin: 40px auto;
+	.tip-btm{
+		height: 40px;
+		margin-left: -108px;
+		margin-top: 40px;
+		text-align: center;
+		.ui-btn-yellow-gradients{
+			width: 180px;
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+}
+.popup-tip-success{
+	width: 390px;
+	margin: 20px auto;
+	.popup-tip-cont{
+		.popup-tip-title{
+			text-align: center;
+			font-size: @font-size-grade2;
+			color: @color-gray-dark;
+			margin-bottom: 15px;
+			font-weight: bold;
+		}
+		.popup-tip-remark{
+			text-align: center;
+			font-size: @font-size-grade1;
+			color: @color-gray-dark;
+			font{
+				color: @color-red;
+			}
+		}
+	}
+	.popup-btm{
+		margin-top: 30px;
+		text-align: center;
+		.ui-btn-blue-gradients, .ui-btn-yellow-gradients{
+			width: 80px;
+			text-align: center;
+			margin: 0 10px;
+			&.btn-tip-max{
+				width: 180px;
+			}
+		}
+	}
+}
+
+
+.popup-login{
+	.ui-form{
+		.ui-form-item{
+			position: relative;
+			margin: 0;
+	
+			input{
+	
+				&:-webkit-autofil{
+					background:#fff;
+					color:#000;
+				}
+			}
+	
+			
+			.ui-input{
+				display: block;
+				width:100%;
+				height: 40px;
+				padding:0;
+				line-height: 40px;
+				border:1px solid @border-color;
+				.border-right-radius(4px);
+				overflow: hidden;
+	
+				input{
+					width: 242px;
+					height: 40px;
+					line-height: 40px;
+					padding: 0 10px;
+					font-size: 14px;
+					border: none !important;
+					background: #fff;
+					overflow: hidden;
+					border: none;
+					outline: none;
+					resize: none;
+					color: #333;
+					vertical-align: top;
+				}
+	
+				.icon{
+					display:inline-block;
+					width: 40px;
+					height: 40px;
+					text-align: center;
+					color: #bfbfbf;
+					background:#f3f3f3;
+					border-right:1px solid @border-color;
+				}
+			}
+			
+	
+			&.checkcode{
+				position: relative;
+	
+				.ui-input{
+					width: 179px;
+					padding:0 12px;
+					.border-radius(4px);
+					
+					input{
+						width: 100%;
+					}
+				}
+	
+				.ui-img{
+					display: block;
+					width: 83px;
+					height: 42px;
+					position: absolute;
+					background: #f3f3f3;;
+					top: 0px;
+					right: 0px;
+					
+					img{
+						width: 100%;
+					}
+				}
+	
+				.Validform_checktip{
+					position: absolute;
+					left:0px;
+				}
+			}
+	
+			&.others{
+				min-height: 14px;
+				margin: 25px 0;
+				line-height: 14px;
+				text-align: right;
+				color:@color-gray-grade4;
+				span{
+					display: inline-block;
+					vertical-align: -2px;
+					margin: 0 5px;
+					width: 1px;	
+					height: 14px;
+					background-color: #bababa;
+				}
+				.ui-link{
+					color:@color-gray-grade4;
+	
+					font-size: @font-size-grade1;
+				}
+			}
+	
+			&.operate{
+				margin-bottom: 30px;
+				text-align: center;
+				
+				.ui-btn{
+					width: 306px;
+					font-size: 18px;
+					font-weight: 700;
+				}
+			}
+		}
+	}	
+	.form-login{
+		width: 346px;
+		min-height: 100px;
+		background: @color-white;
+		.border-radius(4px);
+		overflow: hidden;
+
+		.ui-form-head{
+			padding: 20px;
+			font-size: 18px;
+			color: #666;
+			line-height: 18px;
+			border-bottom: 1px solid @border-color;
+			.ui-title{
+				margin-bottom: 10px;
+				font-size: 18px;
+				color: #5cb85c;
+				font-weight: 700;
+				line-height: 18px;
+			}
+		}
+
+		.ui-form-body{
+			padding:35px 20px 10px 20px;
+			border-bottom: 1px solid @border-color;
+			.ui-form-item{
+				input{   
+					padding: 0;
+					margin: 0;
+					outline: none;
+					border: none;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.ui-form-foot{
+			display: block;
+			padding: 10px 20px; 
+			color: @color-gray-dark;
+			font-size: @font-size-base;
+			.clearfix();
+
+			span{
+				display:block;
+				height: 30px;
+				line-height: 30px;
+				padding-left:26px;
+			}
+
+			.ui-link{
+				color:@brand-primary;
+			}
+
+			.login-qq{
+				background: url('../images/s-login.png') no-repeat 0 5px;
+				float: left;
+			}
+
+			.login-reg{
+				font-size: 16px;
+				background: url('../images/s-login.png') no-repeat -23px -22px;
+				float: right;
+			}
+		}
+
+		.ui-form-item{
+		
+			.ui-input{
+				input{
+					padding-left:12px;
+				}
+			}
+
+			.Validform_checktip{
+				display: block;
+			}
+		}
+	}	
+}

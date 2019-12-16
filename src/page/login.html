@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/page.login.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/scripts/plugins/validform_v5.3.2/Validform.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="page page-login">
+             @@include('./include/header.html')
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="wrap-inner">
+                        <form class="ui-form form-login" id="j-form-login">
+                            <div class="ui-form-head">
+                                <h3 class="ui-title">用户登录</h3>
+                            </div>
+                            <div class="ui-form-body">
+                                <div class="ui-form-item">
+                                    <span class="ui-input">
+                                        <i class="icon icon-user-2"></i>
+                                        <input type="text"  name="name" class="inputxt" placeholder="请输入用户名" datatype="s6-18" nullmsg="用户名不能为空" errormsg="昵称至少6个字符,最多18个字符！" autocomplete="off"/>
+                                    </span>
+                                    <span class="Validform_checktip form-checktip"><span>
+                                </div>
+                                <div class="ui-form-item">
+                                    <span class="ui-input form-input-wrap">
+                                        <i class="icon icon-lock-2"></i>
+                                        <input type="password" name="password" placeholder="请输入登录密码" nullmsg="请输入登录密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" autocomplete="off"/>
+                                    </span>
+                                    <span class="Validform_checktip form-checktip"></span>
+                                </div>
+                                <div class="ui-form-item checkcode">
+                                    <span class="ui-input">
+                                        <input type="text" placeholder="验证码" placeholder="请输入验证码" nullmsg="请输入验证码" datatype="*4"  errormsg="验证码输入错误" autocomplete="off"/>
+                                    </span>
+                                    <span class="ui-img">
+                                        <img src="#" alt="" />
+                                    </span>
+                                    <span class="Validform_checktip form-checktip"></span>
+                                </div>
+                                <div class="ui-form-item others">
+                                    <a href="#" class="ui-link">找回密码</a>｜
+                                    <a href="#" class="ui-link">激活账号</a>
+                                </div>
+                                <div class="ui-form-item operate">
+                                    <input type="submit" class="ui-btn ui-btn-green-gradients j-btn-login" value="立即登录"/>
+                                </div>
+                            </div>
+                            <div class="ui-form-foot">
+                                <span class="login-qq">QQ账号登录</span>
+                                <span class="login-reg">新用户，
+                                    <a href="#" class="ui-link">免费注册</a>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容区域 end  -->
+            @@include('./include/footer.html',{"baseurl":"."})
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="./assets/scripts/plugins/validform_v5.3.2/Validform.js"></script>
+    <script type="text/javascript">
+        $("#j-form-login").Validform({
+            tiptype: function (msg, o, cssctl) {
+                if (!o.obj.is("form")) {//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                    var objtip = o.obj.parent().siblings(".Validform_checktip");
+                    cssctl(objtip, o.type);
+                    objtip.text(msg);
+                    if(o.type===3){
+                        o.obj.removeClass("Validform_error").parent().addClass("Validform_error");
+                    }else if(o.type===2){
+                        o.obj.removeClass("Validform_error").parent().removeClass("Validform_error");
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

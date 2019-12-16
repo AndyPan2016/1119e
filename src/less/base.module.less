@@ -1,0 +1,255 @@
+@import "_variables.less";
+@import "_mixins.less";
+
+/*==标题线==*/
+.tit-line{
+  border-bottom:1px solid @border-color;
+  line-height:41px;
+  height:41px;
+  position:relative;
+  margin-bottom:30px;
+  span{
+    border-bottom:4px solid @brand-primary;
+    line-height:37px;
+    position: absolute;
+    bottom:-1px;
+    display:block;
+    left:0;
+    width:125px;
+    font-size:30px;
+  }
+  b{
+    display:inline-block;
+    font-weight:normal;
+    padding-left:125px;
+    font-size:@font-size-grade1;
+    color:@color-gray-grade1;
+    i{
+      font-style:normal;
+      display:inline-block;
+      padding-right:8px;
+    }
+  }
+  .gray-999 {
+    font-size:@font-size-grade1;
+  }
+}
+
+/*==个人中心左侧导航==*/
+.m-navbar{
+  background:@color-white;
+  .m-navbar-item{
+    margin:0;
+    &.active{
+      dt{
+        background:@color-green-light url("../images/icon/icon-top-arrow.png") no-repeat 210px 20px;
+      }
+    }
+    dt{
+      height:48px;
+      line-height:48px;
+      background:@color-green-light url("../images/icon/icon-bottom-arrow.png") no-repeat 210px 20px;
+      padding:0 10px 0 20px;
+      color:@color-white;
+      font-size:@font-size-grade2;
+      margin-bottom:4px;
+      cursor:pointer;
+      i{
+        font-size:20px;
+        margin-right:10px;
+      }
+    }
+    dd{
+      padding:0;
+      margin:0;
+      overflow:hidden;
+
+      .box-shadow();
+      .content{
+        padding:0 0 0 20px;
+        a{
+          display:block;
+          line-height:50px;
+          border-bottom:1px solid @border-color;
+          font-size:14px;
+          &.last{
+            border-bottom:0;
+          }
+          &.active{
+            background:url("../images/icon/icon-gray-roun.png") no-repeat 187px;
+          }
+          i{
+            margin-right:8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*==个人中心title 带图标样式=*/
+.m-user-titleIcon{
+  clear: both;
+  overflow: hidden;
+  .ui-user-titleIcon-left{
+    float: left;
+    .icon{
+      display: inline-block;
+      font-size: @font-size-grade6;
+    }
+    .round{
+      width:24px;
+      height:24px;
+      display:inline-block;
+      border-radius:50%;
+      background:@brand-primary;
+      color:#fff;
+      text-align: center;
+      i{
+        font-size:14px;
+      }
+    }
+    .ui-user-titleH4{
+      font-weight: normal;
+      display: inline-block;
+      font-size: @font-size-grade2;
+      color: @color-gray-dark;
+      margin-left: 10px;
+    }
+  }
+  .ui-user-titleIcon-right{
+    float: right;
+    font-size: @font-size-grade1;
+    .ui-righttext{
+      display: inline-block;
+      margin-right: 30px;
+    }
+    .primary{
+      color: @brand-primary;
+    }
+    .link{
+      display: inline-block;
+      margin-right: 25px;
+    }
+    .more-link{
+      display: inline-block;
+    }
+  }
+}
+
+/*==个人中心选项卡==*/
+.ui-tabs{
+  min-width:auto;
+  min-height:auto;
+  .ui-tabs-hd{
+    height:60px;
+    overflow:inherit;
+    display:block;
+    position:relative;
+    z-index:10;
+    .tabs-hd-item{
+      padding:0 40px;
+      font-size:16px;
+      min-width:auto;
+      color:@color-gray-dark;
+      border-right:1px solid transparent;
+      border-left:1px solid transparent;
+      position:relative;
+      cursor:pointer;
+      transition:none;
+      line-height: 60px;
+      &:hover{
+        color:@color-gray-dark;
+      }
+      &.active{
+        height:62px;
+        font-weight:normal;
+        border-right:1px solid @border-color;
+        border-left:1px solid @border-color;
+        background:@color-white;
+        span{
+          height:6px;
+          display:block;
+          position:absolute;
+          left:-1px;
+          right:-1px;
+          background:@brand-primary;
+          top:0;
+        }
+        &.first{
+          border-left:1px solid transparent;
+
+        }
+      }
+    }
+  }
+  .ui-tabs-bd{
+    clear:both;
+    border-top:1px solid @border-color;
+    top:-1px;
+    z-index:9;
+    position:relative;
+    .tabs-bd-item{
+      position:relative;
+      display:none;
+      &.active{
+        display:block;
+      }
+      .content{
+        padding:40px;
+        .m-user-titleIcon{
+          height:24px;
+          line-height:24px;
+          border-bottom:1px solid @border-color;
+          padding-bottom:20px;
+        }
+      }
+    }
+  }
+}
+
+/*==个人中心基础模块==*/
+.m-ucbase{
+  .hd{
+    height:24px;
+    line-height:24px;
+    padding-bottom:20px;
+    .clearfix();
+    .fn-left{
+      font-size:0;
+    }
+    .ui-title{
+      font-size:16px;
+      display:inline-block;
+      margin-left:10px;
+    }
+    .round{
+      width:24px;
+      height:24px;
+      display:inline-block;
+      border-radius:50%;
+      background:@brand-primary;
+      color:#fff;
+      text-align: center;
+      i{
+        font-size:14px;
+      }
+    }
+    .fn-right{
+      font-size:14px;
+      .operate{
+        display:inline-block;
+      }
+      a{
+        display:inline-block;
+        margin-left:30px;
+        &.ui-link{
+          &.active{
+            color:@brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+}

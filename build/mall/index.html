@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>1119贷-同城互联网金融平台</title>
+	    <link rel="shortcut icon" href="/favicon.ico" />
+	    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+	    <link rel="stylesheet" type="text/css" href="../assets/css/base.css" />
+	    <link rel="stylesheet" type="text/css" href="../assets/css/page.mall.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="page page-mall">
+	            <!-- 头部  -->
+	            <meta name="viewport" content="width=1200,  user-scalable=no">
+<div class="header">
+    <div class="header-top">
+        <div class="header-wrap">
+            <label class="header-top-item">客服热线:400-610-1119 ( 9:00-17:30 )</label>
+            <span class="header-top-item">
+                <a href="javascript:;" class="header-login-regist" id="j-btn-popup-login">登录</a>|
+                <a href="../register.html" class="header-login-regist">注册</a>
+            </span>
+            <span class="header-tools">
+                <a href="javascript:;" class="tools-item"><i class="icon icon-trumpet-2"></i>公告</a>
+                <a href="../mall/" class="tools-item "><i class="icon icon-integral"></i>积分商城</a>
+                <a href="javascript:;" class="tools-item"><i class="icon icon-phone-2"></i>下载移动客户端</a>
+                <a href="javascript:;" class="tools-item">帮助中心</a>
+                <a href="javascript:;" class="tools-item">新手指引</a>
+                <a href="javascript:;" class="tools-item">关注我们</a>
+                <a href="javascript:;" class="tools-item">风险教育</a>
+            </span>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="header-wrap">
+            <a href="/index.html" class="header-logo"></a>
+            <span class="header-site-area" id="j-nav-site">
+                <a href="javascript:;" class="site-area icon-site-down">
+                    重庆站
+                </a>
+                <div class="site-area-list">
+                    <a href="javascript:;" class="site-area-item">重庆站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">昆明站 &gt;</a>
+                    <a href="javascript:;" class="site-area-item">江苏站 &gt;</a>
+                </div>
+            </span>
+            <span class="nav-wrap">
+                <a href="/" class="nav-item active">首页</a>
+                <span class="nav-item caret">
+                    <a class="nav-item-text" href="/borrow.html">我要投资</a>
+                    <span class="nav-caret-list">
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                        <a href="javascript:;" class="site-area-item">玖安定投</a>
+                    </span>
+                </span>
+                <a href="/investment/list.html" class="nav-item">我要借款</a>
+                <a href="/information/" class="nav-item">信息披露</a>
+                <a href="/about/introduction.html" class="nav-item">关于我们</a>
+            </span>
+            <a href="/usercenter/" class="nav-my-account icon-my-account">我的账户</a>
+        </div>
+    </div>
+</div>
+
+<!-- 弹出框的DOM结构必须放在fn-popup-hide容器中 -->
+<div class="fn-popup-hide">
+    <!-- 登录 -->
+    <div class="popup-login" id="j-popup-login">
+        <form class="ui-form form-login" id="j-form-login">
+            <div class="ui-form-head">
+                <h3 class="ui-title">登录您的账户</h3>
+                <div>请输入您的用户名，密码和验证码</div>
+            </div>
+            <div class="ui-form-body">
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-user-2"></i>
+                        <input type="text"  name="name" class="inputxt" placeholder="请输入用户名" datatype="s6-18" nullmsg="用户名不能为空" errormsg="昵称至少6个字符,最多18个字符！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"><span>
+                </div>
+                <div class="ui-form-item">
+                    <span class="ui-input">
+                        <i class="icon icon-lock-2"></i>
+                        <input type="password" name="password" placeholder="请输入登录密码" nullmsg="请输入登录密码" datatype="*6-16" errormsg="密码范围在6~16位之间！" autocomplete="off"/>
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item checkcode">
+                    <span class="ui-input">
+                        <input type="text" placeholder="验证码" placeholder="请输入验证码" nullmsg="请输入验证码" datatype="*4"  errormsg="验证码输入错误" autocomplete="off"/>
+                    </span>
+                    <span class="ui-img">
+                        <img src="#" alt="" />
+                    </span>
+                    <span class="Validform_checktip form-checktip"></span>
+                </div>
+                <div class="ui-form-item others">
+                    <a href="#" class="ui-link">找回密码</a>
+                    <span></span>
+                    <a href="#" class="ui-link">激活账号</a>
+                </div>
+                <div class="ui-form-item operate">
+                    <input type="submit" class="ui-btn ui-btn-green-gradients j-btn-login" value="立即登录"/>
+                </div>
+            </div>
+            <div class="ui-form-foot">
+                <span class="login-qq">QQ账号登录</span>
+                <span class="login-reg">新用户，
+                    <a href="#" class="ui-link">免费注册</a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <!-- 登录 -->
+</div>
+
+	            <!-- 头部end  -->					
+				<div class="container container-sticky">
+					<div class="container-sticky-wrap">
+						<!--商城banner start-->
+						<div class="mall-banner">
+							<!--banner start-->
+							<div class="layui-carousel" id="j-test-carousel">
+							    <div carousel-item>
+							        <div class="div" style="background-image: url(../assets/images/mall/mall-banner.jpg);"></div>
+							        <div class="div" style="background-image: url(../assets/images/mall/mall-banner.jpg);"></div>
+							        <div class="div" style="background-image: url(../assets/images/mall/mall-banner.jpg);"></div>
+							    </div>
+							</div>
+							<!--banner end-->
+							<!--分类 start-->
+							<div class="mall-classification">
+								<div class="mall-classification-item">
+									<div class="mall-classfication-item1">
+										<div class="mall-classfication-item-title"><a href="#">
+											<i class="icon icon-all"></i>
+											<span>全部商品</span>
+										</a></div>
+										<div class="mall-classfication-item-list">
+											<a href="#">实物商品 </a>
+											<a href="#">虚拟商品</a>
+											<a href="#">专属商品</a>
+										</div>
+									</div>
+									<div class="mall-classfication-item2">
+										<div class="mall-classfication-item-title"><a href="#">
+											<i class="icon icon-bag"></i>
+											<span>实物商品</span>
+										</a></div>
+										<div class="mall-classfication-item-list">
+											<a href="#">电子产品</a>
+											<a href="#">生活家居</a>
+											<a href="#">厨卫用品</a>
+											<a href="#">零食专区</a>
+											<a href="#">粮油用品</a>
+										</div>
+									</div>
+									<div class="mall-classfication-item3">
+										<div class="mall-classfication-item-title"><a href="#">
+											<i class="icon icon-xuni"></i>
+											<span>虚拟商品</span>
+										</a></div>
+										<div class="mall-classfication-item-list">
+											<a href="#">提货卡</a>
+											<a href="#">会员换购</a>
+											<a href="#">VIP换购</a>
+											<a href="#">话费</a>
+										</div>
+									</div>
+									<div class="mall-classfication-item4">
+										<div class="mall-classfication-item-title"><a href="#">
+											<i class="icon icon-diamond-2"></i>
+											<span>专属商品</span>
+										</a></div>
+										<div class="mall-classfication-item-list">
+											<a href="#">藏茶专属</a>
+											<a href="#">金箔</a>
+											<a href="#">专属银锭</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--分类end-->
+							<!--积分 start-->
+							<div class="mall-integral">
+								<div class="mall-integral-account">
+									<!-- 登录 -->
+									<div class="mall-integral-account-yes">
+										<!-- 未登录时div标签中的a标签显示登录后span显示 -->										
+										<div>
+											<a href="#" class="hide">请登录</a>
+											<span class="">Hi, chlianmmm</span>
+										</div>
+										<p>欢迎来到1119贷积分商城!</p>
+									</div>
+									<!-- 登录end -->
+									<!-- 积分统计 -->
+									<div class="mall-integral-total">
+										<h4>我的积分</h4>
+										<div><i class="icon icon-jifen"></i></div>
+										<!-- 未登录时积分值为0 -->
+										<p>4770</p>
+										<a href="#" class="ui-btn-yellow-gradients">去赚积分</a>
+									</div>
+									<!-- 积分统计end -->
+								</div>
+							</div>
+							<!--积分end-->
+						</div>
+						<!--商城banner end-->
+						<!-- 商城内容start -->
+						<div class="mall-content">
+							<!-- 商城热门推荐start -->
+							<div class="mall-content-groom">
+									<div class="mall-index-title">
+										<div class="mall-index-title-content">
+											<img src="../assets/images/mall/mall-laud.png" alt="" class="mall-laud">
+											<div class="mall-index-title-text">1119推荐</div>
+											<img src="../assets/images/mall/mall-hot.png" alt="" class="mall-hot">
+										</div>
+									</div>
+									<ul>
+										<li class="ware-content"><a href="">
+											<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented01.png" alt=""></div>
+											<div class="ware-info">
+												<div class="ware-introduce">三个月期VIP换购</div>
+												<div class="ware-integral"><span>12000</span>积分</div>
+												<div class="ware-rate">市场参考价：¥125.00</div>
+											</div>
+										</a></li>
+										<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">三个月期VIP换购</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥125.00</div>
+												</div>
+										</a></li>
+										<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">飞利浦（PHILIPS）咖啡机 HD7762/00</div>
+													<div class="ware-integral"><span>2006856</span>积分</div>
+													<div class="ware-rate">市场参考价：¥1399.00</div>
+												</div>
+										</a></li>
+										<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">中国移动30元充值卡</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥30.00</div>
+												</div>
+										</a></li>
+										<li class="ware-content last"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">中国移动30元充值卡</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥30.00</div>
+												</div>
+										</a></li>																																								
+									</ul>
+							</div>
+							<!-- 商城热门推荐end -->
+
+							<!-- 商城1F start -->
+							<div class="mall-floor1">
+									<div class="mall-index-title clearfix">
+										<div class="mall-index-title-content">
+											<i class="icon icon-bag"></i>
+											<span class="mall-floor-text">1F</span>
+											<span class="mall-floor-line"></span>
+											<span class="mall-floor-name">实物商品</span>																							
+										</div>
+										<a href="#" class="more">更多>></a>
+									</div>
+									<div class="mall-floor-content">
+										<div class="mall-floor-info">
+											<div class="mall-floor-info-title">
+												<div>实物商品</div>
+											</div>
+										</div>
+										<ul>
+											<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">美的吸尘器家用手持式</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥125.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind01.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">飞利浦（PHILIPS）咖啡机	HD7762/00</div>
+														<div class="ware-integral"><span>12000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥125.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+													<div class="ware-img"><img src="../../assets/images/mall/mall-mare-in-kind03.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">飞利浦（PHILIPS）咖啡机 HD7762/00</div>
+														<div class="ware-integral"><span>2006856</span>积分</div>
+														<div class="ware-rate">市场参考价：¥1399.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content last"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind04.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">Burberry格纹飞行员太阳眼镜盒</div>
+														<div class="ware-integral"><span>12000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥30.00</div>
+													</div>
+											</a></li>	
+											<li class="ware-content ware-content1"><a href="">
+												<div class="ware-img"><img src="../../assets/images/mall/mall-mare-in-kind05.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">Burberry格纹飞行员太阳眼镜盒</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥125.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind06.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">Burberry格纹飞行员太阳眼镜盒</div>
+														<div class="ware-integral"><span>12000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥125.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+													<div class="ware-img"><img src="../../assets/images/mall/mall-mare-in-kind07.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">Burberry格纹飞行员太阳眼镜盒</div>
+														<div class="ware-integral"><span>2006856</span>积分</div>
+														<div class="ware-rate">市场参考价：¥1399.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content ware-content1 last"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-in-kind08.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">Burberry格纹飞行员太阳眼镜盒</div>
+														<div class="ware-integral"><span>12000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥30.00</div>
+													</div>
+											</a></li>																																																		
+										</ul>										
+									</div>								
+							</div>
+							<!-- 商城1F end -->
+
+							<!-- 商城2F start -->
+							<div class="mall-floor2">
+									<div class="mall-index-title clearfix">
+										<div class="mall-index-title-content">
+											<i class="icon icon-diamond-2"></i>
+											<span class="mall-floor-text">2F</span>
+											<span class="mall-floor-line"></span>
+											<span class="mall-floor-name">专属商品</span>																							
+										</div>
+										<a href="#" class="more">更多>></a>
+									</div>
+									<div class="mall-floor-content">
+										<div class="mall-floor-info">
+											<div class="mall-floor-info-title">
+												<div>专属商品</div>
+											</div>
+										</div>
+										<ul>
+											<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">卢正浩狮峰山绿茶精品</div>
+													<div class="ware-integral">尊享价:<span>1250000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥3990.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">LAIRE/莱瑞999足银元宝 </div>
+													<div class="ware-integral">尊享价:<span>1750000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥2250.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">卢正浩狮峰山绿茶精品</div>
+													<div class="ware-integral">尊享价:<span>1250000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥3990.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content last"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">LAIRE/莱瑞999足银元宝 </div>
+													<div class="ware-integral">尊享价:<span>1750000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥2250.00</div>
+												</div>
+											</a></li>	
+											<li class="ware-content ware-content1"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">卢正浩狮峰山绿茶精品</div>
+													<div class="ware-integral">尊享价:<span>1250000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥3990.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">LAIRE/莱瑞999足银元宝 </div>
+													<div class="ware-integral">尊享价:<span>1750000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥2250.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">卢正浩狮峰山绿茶精品</div>
+													<div class="ware-integral">尊享价:<span>1250000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥3990.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content last ware-content1"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-exclusive02.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">LAIRE/莱瑞999足银元宝 </div>
+													<div class="ware-integral">尊享价:<span>1750000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥2250.00</div>
+												</div>
+											</a></li>																																																		
+										</ul>										
+									</div>								
+							</div>
+							<!-- 商城2F end -->	
+							
+							<!-- 商城3F start -->
+							<div class="mall-floor3">
+									<div class="mall-index-title clearfix">
+										<div class="mall-index-title-content">
+											<i class="icon icon-xuni"></i>
+											<span class="mall-floor-text">3F</span>
+											<span class="mall-floor-line"></span>
+											<span class="mall-floor-name">虚拟商品</span>																							
+										</div>
+										<a href="#" class="more">更多>></a>
+									</div>
+									<div class="mall-floor-content">
+										<div class="mall-floor-info">
+											<div class="mall-floor-info-title">
+												<div>虚拟商品</div>
+											</div>
+										</div>
+										<ul>
+											<li class="ware-content"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented01.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">三个月期VIP换购</div>
+													<div class="ware-integral"><span>12000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥125.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented03.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">国通加油卡</div>
+														<div class="ware-integral"><span>4250000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥500.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented04.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">迅雷超级会员季卡</div>
+														<div class="ware-integral"><span>360000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥90.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content last"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented05.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">京东E卡100元面值（实体卡）</div>
+														<div class="ware-integral"><span>90000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥125.00</div>
+													</div>
+											</a></li>	
+											<li class="ware-content ware-content1"><a href="">
+												<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented06.png" alt=""></div>
+												<div class="ware-info">
+													<div class="ware-introduce">京东E卡500元面值（实体卡）</div>
+													<div class="ware-integral"><span>425000</span>积分</div>
+													<div class="ware-rate">市场参考价：¥500.00</div>
+												</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented07.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">迅雷白金会员月卡</div>
+														<div class="ware-integral"><span>50000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥30.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content ware-content1"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented08.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">京东E卡200元面值（实体卡）</div>
+														<div class="ware-integral"><span>180000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥200.00</div>
+													</div>
+											</a></li>
+											<li class="ware-content ware-content1 last"><a href="">
+													<div class="ware-img"><img src="../assets/images/mall/mall-mare-invented01.png" alt=""></div>
+													<div class="ware-info">
+														<div class="ware-introduce">三个月期VIP换购</div>
+														<div class="ware-integral"><span>12000</span>积分</div>
+														<div class="ware-rate">市场参考价：¥125.00</div>
+													</div>
+											</a></li>																																																		
+										</ul>										
+									</div>								
+							</div>
+							<!-- 商城3F end -->								
+
+						</div>
+						<!-- 商城内容end -->
+
+					</div><!--/container-sticky-wrap-->		
+				</div>	<!--/container-->
+	            <!-- 底部  -->
+	            <div class="footer">
+    <div class="footer-wrap">
+        <div class="footer-base-info">
+            <span class="footer-base-item">
+                <label class="info-item-title">关于我们</label>
+                <a href="javascript:;" class="info-item-link">企业管理</a>
+                <a href="javascript:;" class="info-item-link">业绩报告</a>
+                <a href="javascript:;" class="info-item-link">平台数据</a>
+                <a href="javascript:;" class="info-item-link">活动专区</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">安全保障</label>
+                <a href="javascript:;" class="info-item-link">信息披露</a>
+                <a href="javascript:;" class="info-item-link">银行存管</a>
+                <a href="javascript:;" class="info-item-link">风险管理</a>
+                <a href="javascript:;" class="info-item-link">法律法规</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">用户中心</label>
+                <a href="javascript:;" class="info-item-link">新手指引</a>
+                <a href="javascript:;" class="info-item-link">我的账户</a>
+                <a href="javascript:;" class="info-item-link">帮助中心</a>
+                <a href="javascript:;" class="info-item-link">关于我们</a>
+            </span>
+            <span class="footer-base-item">
+                <label class="info-item-title">服务产品</label>
+                <a href="javascript:;" class="info-item-link">我要投资</a>
+                <a href="javascript:;" class="info-item-link">我要借款</a>
+                <a href="javascript:;" class="info-item-link">产品介绍</a>
+                <a href="javascript:;" class="info-item-link">收费规则</a>
+            </span>
+
+            <span class="footer-qr-code">
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">关注微信公众号</label>
+                </span>
+                <span class="qr-code-item">
+                    <img src="../assets/images/qr-code-wx.jpg" class="qr-code-thumb" />
+                    <label class="qr-code-text">下载APP投资</label>
+                </span>
+            </span>
+
+            <span class="footer-contact-info">
+                <label class="contact-info-title">全国统一服务热线：</label>
+                <label class="contact-info-phone">400-610-1119</label>
+                <label class="contact-info-title">公司地址：</label>
+                <label class="contact-info-address">重庆市渝北区黄山大道两江星界3栋10-4</label>
+            </span>
+        </div>
+        <div class="footer-copyright">
+            <div class="footer-friendly-link">
+                友情链接：
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">蜂鸟资本</a>
+                <a href="javascript:;" class="friendly-link-item">观世纪</a>
+                <a href="javascript:;" class="friendly-link-item">早导网</a>
+                <a href="javascript:;" class="friendly-link-item">网贷之家</a>
+                <a href="javascript:;" class="friendly-link-item">天眼网贷</a>
+            </div>
+            <div class="footer-copyright-record">
+                <label class="copyright">Copyright © 2016 1119贷版权所有</label>
+                <label class="record-num">渝ICP备13008087号</label>
+            </div>
+        </div>
+    </div>
+    <div class="footer-record-info">
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe01.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe02.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item"><img src="../assets/images/footer-safe03.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe04.png" alt=""></a>
+        <a href="javascript:;" class="record-info-item "><img src="../assets/images/footer-safe05.png" alt=""></a>
+    </div>
+</div>
+ 
+	            <!-- 底部end  -->					
+			</div><!--/page-->
+		</div><!--/wrapper-->
+
+
+	    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+	    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+	    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+		<script>
+			$(function(){				 
+				let mycarousel = CompCarousel();
+				mycarousel.render({
+				    target: '#j-test-carousel',
+				    width: '100%',
+				    height:'350px',
+				    arrow:'none',
+				    autoplay:true
+				});
+				/*
+				 *商城banner上的积分和分类距离控制
+				*/
+				function autoCenter(){
+					let windowWidth = $(window).width();
+					let width = (windowWidth-1200)/2;
+					if(width>0){
+						$(".mall-classification").css({"left":width});
+						$(".mall-integral").css({"right":width});
+					}else{
+						$(".mall-classification").css({"left":0});
+						$(".mall-integral").css({"right":0});					
+					}
+				}
+				autoCenter();
+				$(window).resize(function(){
+					autoCenter();
+				})
+			})
+		</script>
+	</body>
+</html>

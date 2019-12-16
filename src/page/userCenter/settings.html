@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1119贷-同城互联网金融平台</title> 
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/page.usercenter.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page page-usercenter">
+            <!-- 头部 -->
+            @@include('../include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                        <div class="usercenter-wrap">
+                            <!--左边内容区域 start-->
+                            @@include('../include/uc.menus.html')
+                            <!--左边内容区域 end  -->
+
+                            <!--右边内容区域 start-->
+                            <div class="usercenter-right settings-wrap">
+                                <!-- 选项卡区域 start -->
+                                <div class="ui-tabs j-tabs" id="j-tabs">
+                                    <ul class="ui-tabs-hd">
+                                        <li class="tabs-hd-item j-tabs-hd-item active first"><span></span>账户设置</li>
+                                    </ul>
+                                    <div class="ui-tabs-bd">
+                                        <div class="tabs-bd-item j-tabs-cont-item active">
+                                            <div class="content">
+                                                <div class="ui-uc-tips">
+                                                    <p>温馨提示：下面<span class="color-red">红色</span>的项目需要您根据提示完成设置, 所有项目都变为<span class="color-green">绿色</span>时,您就可以使用1119全站所有服务。</p>
+                                                </div>
+
+                                                <!-- m-ucbase start -->
+                                                <div class="m-ucbase">
+                                                    <!-- bd start -->
+                                                    <div class="bd">
+                                                        <ul class="settings-list">
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-warning"></i><span class="fn-left">用户名</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您还没有进行实名认证，请尽快提交实名认证，实名认证通过后才能正常投资。</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">立即认证</a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-warning"></i><span class="fn-left">支付密码</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您还没有设置支付密码,请尽快设置支付密码，设置支付密码以后才能正常投资。</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">设置密码</a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-warning"></i><span class="fn-left">存管银行签约</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您还没有进行支付签约,请尽快完成签约，完成签约以后才能正常投资。</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">立即签约</a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-warning"></i><span class="fn-left">我的银行卡</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您还没有绑定银行，请尽快绑定银行才能进行资金充提相关交易。</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">立即绑卡</a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-round-done color-green"></i><span class="fn-left">手机认证</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您已通过手机短信认证。 手机号码： 159****3112 </div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-green">修改 </a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-round-done color-green"></i><span class="fn-left">登录密码</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">为了您的交易和账户安全，请确保密码妥善保管，不要泄露密码给任何人!</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-green">修改 </a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-warning"></i><span class="fn-left">风险问卷调查</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您还没有进行风险问卷调查，建议你定期评估，合理投资</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">填写问卷</a></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="col-1 fn-left"><i class="icon icon-vip"></i><span class="fn-left">VIP用户</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap">您现在是普通用户，升级为VIP用户后，提现和投资手续费率有加大优惠。</div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">立即升级</a></div>
+                                                            </li>
+                                                            <li class="col-user">
+                                                                <div class="col-1 fn-left"><i class="icon icon-round-user"></i><span class="fn-left">完善信息</span></div>
+                                                                <div class="col-2 fn-left fn-nowrap ">
+                                                                    <p>您还没有完善个人信息登记，请尽快完善信息~</p>
+                                                                    <div class="progress-wrap">
+                                                                        <span class="ui-progress"><i style="width:60%"></i></span>
+                                                                        <span class="progress-num">60%</span>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="col-3 fn-left"><a href="#" class="color-red">完善信息 </a></div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- bd end   -->
+                                                </div>
+                                                <!-- m-ucbase end  -->
+
+                                            </div><!--/content-->
+                                        </div><!--/tabs-bd-item-->
+                                    </div><!--/ui-tabs-bd-->
+                                </div>
+                                <!-- 选项卡区域 end   -->
+                            </div>
+                            <!--右边内容区域 end  -->
+                        </div><!--/usercenter-wrap-->
+                    </div><!--/container-wrap-->
+                </div><!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+
+            <!-- 底部 -->
+             @@include('../include/footer.html',{"baseurl":".."})
+            <!-- 底部 -->
+        </div><!--/page-->
+    </div><!--/wrapper-->
+
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/swiper.js"></script>
+    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+
+    <script>
+        $(function() {
+            //调用CompTabs组件
+            var tabs = CompTabs({
+                target: $('#j-tabs')
+            });
+            //自定义选项卡组件的切换事件
+            tabs.on('switch', function(target, thisItem, idx){
+                console.info(idx);
+            });
+        })
+    </script>
+</body>
+
+</html>

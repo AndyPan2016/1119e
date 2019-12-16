@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1119贷-同城互联网金融平台</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" href="./assets/scripts/plugins/validform_v5.3.2/Validform.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/base.css" />
+</head>
+<body>
+	
+    <div class="wrapper">
+        <div class="page page-usercenter">
+            <!-- 头部 -->
+            @@include('./include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                    	<form class="layui-form ui-form" action="">
+                    		<div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text">这里是一段有内涵的文字！</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text form-block-prominent">余额：232324.11</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block">
+							    	<div class="m-bank-type">
+							    		<img src="./assets/images/icon/icon-bank-gs.png" alt="银行卡图标" class="icon-bank" />
+							    		<span class="bank-number">
+								    		中国工商银行
+								    		<label class="number">6222 **** **** 3121</label>
+							    		</span>
+							    		<span class="bank-remark">
+							    			提现限额：一个单笔5万 单日50万
+							    		</span>
+							    	</div>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text form-block-prominent">
+							    	<font class="block-font-default">余额：</font>232324.11
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">普通的下拉框</label>
+							    <span class="form-block">
+								    <select name="city-default" data-filter="filters">
+								        <option value="">请选择一个城市</option>
+								        <option value="010">北京</option>
+								        <option value="021">上海</option>
+								        <option value="022">天津</option>
+								        <option value="023" selected>重庆</option>
+								    </select>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">下拉+备注</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <select name="city-default" data-filter="filters">
+									        <option value="">请选择一个城市</option>
+									        <option value="010">北京</option>
+									        <option value="021">上海</option>
+									        <option value="022">天津</option>
+									        <option value="023" selected>重庆</option>
+									    </select>
+								    </span>
+								    <label class="form-input-auxiliary auxiliary-full">辅助文字</label>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">下拉+(颜色)备注</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <select name="city-default" data-filter="filters">
+									        <option value="">请选择一个城市</option>
+									        <option value="010">北京</option>
+									        <option value="021">上海</option>
+									        <option value="022">天津</option>
+									        <option value="023" selected>重庆</option>
+									    </select>
+								    </span>
+								    <label class="form-input-auxiliary auxiliary-full auxiliary-color-red">辅助文字</label>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">可输入搜索的下拉框</label>
+							    <span class="form-block">
+								    <select name="city-search" lay-search>
+								        <option value="">请选择一个城市</option>
+								        <option value="010">北京</option>
+								        <option value="021">上海</option>
+								        <option value="022">天津</option>
+								        <option value="023">重庆</option>
+								    </select>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">禁用选项的下拉框</label>
+							    <span class="form-block">
+								    <select name="city-disabled">
+								        <option value="">请选择一个城市</option>
+								        <option value="010">北京</option>
+								        <option value="021">上海</option>
+								        <option value="022">天津</option>
+								        <option value="023" disabled>重庆</option>
+								    </select>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">分组下拉框</label>
+							    <span class="form-block">
+								    <select name="city-group">
+								        <option value="">请选择</option>
+								        <optgroup label="重庆">
+								            <option value="渝北">重庆-渝北</option>
+								            <option value="江北">重庆-江北</option>
+								            <option value="渝中">重庆-渝中</option>
+								        </optgroup>
+								        <optgroup label="北京">
+								            <option value="朝阳">北京-朝阳</option>
+								        </optgroup>
+								    </select>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">城市联动</label>
+							    <span class="form-block form-block-short"  id="j-form-linkage">
+							    	<span class="form-input-wrap">
+									    <select name="city-province" 
+								            lay-filter="province-select" 
+								            data-linkage="#j-select-city" 
+								            data-linkage-first>
+								        <option value="">请选择省</option>
+								    </select>
+								    </span>
+								    <span class="form-input-wrap">
+									    <select name="city-city" 
+									            id="j-select-city" 
+									            lay-filter="cities-select" 
+									            data-linkage="#j-select-county">
+									        <option value="">请选择市</option>
+									    </select>
+								    </span>
+								    <span class="form-input-wrap">
+									    <select name="city-county" 
+									            id="j-select-county" 
+									            lay-filter="districts-select">
+									        <option value="">请选择县</option>
+									    </select>
+								    </span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框(短)</label>
+							    <span class="form-block form-block-short">
+							    	<span class="form-input-wrap">
+									    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+							    </span>
+						    </div>
+                    		<!-- <div class="ui-form-item">
+							    <label class="form-label">输入框(加减)</label>
+							    <span class="form-block form-block-short">
+							    	<span class="form-input-wrap">
+									    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+							    </span>
+						    </div>-->
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框(默认)</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <input type="password" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+								    <label class="form-input-auxiliary">辅助文字</label>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框(长)</label>
+							    <span class="form-block form-block-long">
+							    	<span class="form-input-wrap">
+									    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <input type="password" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+								    <!-- 
+								    	弱.level-weak
+								    	中.level-commonly
+								    	强.level-strong
+								    -->
+								    <span class="m-pwd-level level-strong">
+								    	<label class="level-item level-1">弱</label>
+								    	<label class="level-item level-2">中</label>
+								    	<label class="level-item level-3">强</label>
+								    </span>
+								    <label class="form-input-auxiliary auxiliary-full auxiliary-color-red">辅助文字</label>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框(自适应)</label>
+							    <span class="form-block">
+								    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">文本域</label>
+							    <span class="form-block form-block-long">
+							    	<span class="form-input-wrap">
+									    <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+								    </span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">单选(默认)</label>
+							    <span class="form-block">
+							    	<input type="radio" name="sex" value="男" title="男" />
+            						<input type="radio" name="sex" value="女" title="女" checked />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">单选(定制)</label>
+							    <span class="form-block m-radio-customized-type2">
+							    	<input type="radio" name="sex1" value="男" title="男" />
+            						<input type="radio" name="sex1" value="女" title="女" checked />
+							    </span>
+							</div>
+                    		<div class="ui-form-item form-item-each">
+							    <label class="form-label form-label-title">单选（选项和标题独占一行）</label>
+							    <span class="form-block">
+							    	<input type="radio" name="sex1" value="a"  title="A 风险就是损失"/>            						
+								</span>
+								<span class="form-block">
+									<input type="radio" name="sex1" value="b" checked title="B 风险代表不确定性,可能会带来收益,也可能带来损失" />
+								</span>
+								<span class="form-block">
+									<input type="radio" name="sex1" value="c" checked title="C 风险代表不确定性,可能会带来收益,也可能带来损失" />
+								</span>	
+								<span class="form-block">
+									<input type="radio" name="sex1" value="d" checked title="D 风险代表不确定性,可能会带来收益,也可能带来损失" />
+								</span>															
+							</div>
+							<div class="ui-form-item form-item-each">
+							    <label class="form-label form-label-title">单选（标题独占一行，选项在一行）</label>
+							    <span class="form-block">
+							    	<input type="radio" name="sex1" value="a"  title="A 风险就是损失"/>            						
+									<input type="radio" name="sex1" value="b" checked title="B 风险就是损失" />
+									<input type="radio" name="sex1" value="c" checked title="C 风险就是损失" />
+									<input type="radio" name="sex1" value="d" checked title="D 风险就是损失" />
+								</span>															
+						    </div>														
+                    		<div class="ui-form-item">
+							    <label class="form-label">单选(按钮)</label>
+							    <span class="form-block m-radio-customized">
+							    	<input type="radio" name="custom1" value="value1" title="银行卡快捷充值" />
+            						<input type="radio" name="custom1" value="value2" title="网银充值" checked />
+            						<input type="radio" name="custom1" value="value3" title="宽度随文字变化宽度随文字变化" />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">单选(文本)</label>
+							    <span class="form-block m-radio-customized-type1">
+							    	<input type="radio" name="custom2" value="value1" title="全部" />
+            						<input type="radio" name="custom2" value="value2" title="已发布" checked />
+            						<input type="radio" name="custom2" value="value3" title="买方已确认" />
+            						<input type="radio" name="custom2" value="value4" title="双方已确认" />
+            						<input type="radio" name="custom2" value="value5" title="付款中" />
+            						<input type="radio" name="custom2" value="value6" title="已完成" />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">多选(默认)</label>
+							    <span class="form-block">
+							    	<input type="checkbox" data-filter="chkbox" name="like[write]" lay-skin="primary" title="写作" />
+								    <input type="checkbox" name="like[read]" lay-skin="primary" title="阅读" checked />
+								    <input type="checkbox" name="like[dai]" lay-skin="primary" title="发呆" disabled />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">多选(定制)</label>
+							    <span class="form-block m-checkbox-customized">
+							    	<input type="checkbox" name="like[eat]" value="eat" title="吃饭" checked />
+								    <input type="checkbox" name="like[sleep]" value="sleep" title="睡觉" />
+								    <input type="checkbox" name="like[play]" value="play" title="打豆豆" />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">日期(默认)</label>
+							    <span class="form-block form-block-long">
+							    	<!-- 日期 需要调用JS渲染 -->
+							    	<div class="ui-datepicker">
+							    		<input type="text" class="ui-input" id="j-a-simple-date" />
+							    	</div>
+							    	<!-- 日期 -->
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">日期范围(默认)</label>
+							    <span class="form-block">
+							    	<!-- 日期 需要调用JS渲染 -->
+							    	<div class="ui-datepicker">
+							    		<input type="text" class="ui-input" id="j-begin-date" />
+							    	</div>
+							    	<!-- 日期 -->
+							    	
+							    	<!-- 日期 需要调用JS渲染
+							    	<div class="ui-datepicker datepicker-short">
+							    		<input type="text" class="ui-input" id="j-end-date" />
+							    	</div> -->
+							    	<!-- 日期 -->
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">验证码</label>
+							    <span class="form-block form-block-short">
+							    	<span class="form-input-wrap">
+						    			<input type="text" class="layui-input" />
+						    		</span>
+					    			<img src="./assets/images/pic-verify-code.jpg" alt="验证码" class="verify-code" />
+							    </span>
+						    </div>
+						</form>
+						<!-- 普通等分两列 -->
+						<form action="" class="layui-form ui-form form-column-2">
+                    		<div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item form-item-full">
+							    <label class="form-label">纯文本</label>
+							    <span class="form-block form-block-text">这里也可以撑满整行</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">普通的下拉框</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <select name="city-default" lay-verify="" data-filter="filters">
+									        <option value="">请选择一个城市</option>
+									        <option value="010">北京</option>
+									        <option value="021">上海</option>
+									        <option value="022">天津</option>
+									        <option value="023" selected>重庆</option>
+									    </select>
+								    </span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">普通的下拉框</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <select name="city-default" lay-verify="" data-filter="filters">
+									        <option value="">请选择一个城市</option>
+									        <option value="010">北京</option>
+									        <option value="021">上海</option>
+									        <option value="022">天津</option>
+									        <option value="023" selected>重庆</option>
+									    </select>
+								    </span>
+							    </span>
+						    </div>
+						</form>
+						<!-- 等分两列、label自动、小杭搞 -->
+						<form action="" class="ui-form form-column-2 form-text-auto form-min">
+                    		<div class="ui-form-item">
+							    <label class="form-label">灰色文字：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">自动撑长：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">灰色文字自动撑长：</label>
+							    <span class="form-block">这里也可以撑满整行</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">灰色文字自动撑长：</label>
+							    <span class="form-block">这里也可以撑满整行</span>
+						    </div>
+						    <div class="ui-form-item form-item-full">
+							    <label class="form-label">文字：</label>
+							    <span class="form-block">我同样可以独居一行</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label form-label-default">默认颜色文字：</label>
+							    <span class="form-block">纯文本、小行高、表单风格</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label form-label-default">自动撑长：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						</form>
+						<!-- 非均等分两列 -->
+						<form action="" class="ui-form form-column-2 form-text-auto form-min form-unaverage">
+							<!-- 
+							奇数列长度大于偶数列 默认使用的CSS3奇偶数，
+							也可使用class来兼容低版本浏览器，
+							old-number.奇数
+							even-number.偶数
+							-->
+                    		<div class="ui-form-item">
+							    <label class="form-label">灰色文字：</label>
+							    <span class="form-block">我的宽度比较大</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">自动撑长：</label>
+							    <span class="form-block">我的宽度比较小</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">灰色文字：</label>
+							    <span class="form-block">我的宽度比较大</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">自动撑长：</label>
+							    <span class="form-block">我的宽度比较小</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">灰色文字：</label>
+							    <span class="form-block">我的宽度比较大</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">自动撑长：</label>
+							    <span class="form-block">我的宽度比较小</span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">灰色文字：</label>
+							    <span class="form-block">我的宽度比较大</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">自动撑长：</label>
+							    <span class="form-block">我的宽度比较小</span>
+						    </div>
+						</form>
+						<!-- 等分三列 -->
+						<form action="" class="ui-form form-column-3 form-text-auto form-min">
+                    		<div class="ui-form-item">
+							    <label class="form-label">三列文字：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">三列文字：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">三列文字：</label>
+							    <span class="form-block">这里是一段有内涵的文字！</span>
+						    </div>
+						</form>
+						<form action="" class="ui-form form-text-auto form-column-none" style="width: 860px;">
+							<div class="ui-form-item">
+								<label class="form-label">用户名</label>
+								<span class="form-block form-block-short">
+									<span class="form-input-wrap">
+										<input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input">
+									</span>
+								</span>
+							</div>
+							<div class="ui-form-item">
+								<label class="form-label">姓名</label>
+								<span class="form-block form-block-short">
+									<span class="form-input-wrap">
+										<input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input">
+									</span>
+								</span>
+							</div>
+							<div class="ui-form-item">
+								<label class="form-label">日均统计日期</label>
+								<span class="form-block form-block-short">
+									<!-- 日期 需要调用JS渲染 -->
+							    	<div class="ui-datepicker">
+										<input type="text" class="ui-input" id="j-form-date-begin" />
+									</div>
+									<label class="form-input-auxiliary">至&nbsp;&nbsp;</label>
+									<div class="ui-datepicker">
+										<input type="text" class="ui-input" id="j-form-date-end" />
+									</div>
+									<!-- 日期 -->
+								</span>
+							</div>
+						    <div class="ui-form-item">
+						    	<a href="javascript:;" class="ui-btn-green-gradients">搜索</a>
+						    </div>
+						</form>
+						<!-- label、block各自为一行 -->
+						<form action="" class="layui-form ui-form">
+                    		<div class="ui-form-item form-item-each">
+							    <label class="form-label">输入框(单独一行)</label>
+							    <span class="form-block form-block-long">
+							    	<span class="form-input-wrap">
+									    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+								    </span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item form-item-each">
+							    <label class="form-label">输入框(单独一行)</label>
+							    <span class="form-block">
+								    <input type="text" name="title" placeholder="请输入内容" autocomplete="off" class="layui-input" />
+							    </span>
+						    </div>
+                    		<div class="ui-form-item form-item-each">
+							    <label class="form-label">文本域</label>
+							    <span class="form-block form-block-long">
+							    	<span class="form-input-wrap">
+									    <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+								    </span>
+							    </span>
+						    </div>
+						</form>
+						<!-- 一个完整表单的验证 -->
+						<blockquote class="layui-elem-quote">
+							以下是一个完整表单的验证案例
+						</blockquote>
+						<form action="" class="layui-form ui-form" id="j-validform">
+                    		<div class="ui-form-item">
+							    <label class="form-label">输入框</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <input type="text" 
+									    	name="key1" 
+									    	placeholder="请输入内容" 
+									    	class="layui-input" 
+									    	datatype="s5-16" 
+									    	errormsg="昵称至少5个字符,最多16个字符！"
+									    	/>
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">密码(密码强度)</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <input type="password" 
+									    	name="pwd1" 
+									    	placeholder="请输入内容" 
+									    	class="layui-input" 
+									    	plugin="passwordStrength" 
+									    	datatype="*6-15" 
+									    	errormsg="密码范围在6~15位之间,不能使用空格！"
+									    	/>
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+								    <!-- 
+								    	弱.level-weak
+								    	中.level-commonly
+								    	强.level-strong
+								    -->
+								    <span class="m-pwd-level passwordStrength level-strong">
+								    	<span class="level-item level-1">弱</span>
+								    	<span class="level-item level-2">中</span>
+								    	<span class="level-item level-3">强</span>
+								    </span>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+							    <label class="form-label">确认密码</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <input type="password" 
+									    	name="pwd2" 
+									    	placeholder="请输入内容" 
+									    	class="layui-input" 
+									    	datatype="*" 
+									    	recheck="pwd1" 
+									    	errormsg="您两次输入的账号密码不一致！"
+									    	/>
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">单选(定制)</label>
+							    <span class="form-block m-radio-customized-type2">
+							    	<span class="form-input-wrap input-min-wrap">
+								    	<input type="radio" name="sex1" value="男" title="男"
+								    		datatype="radio"
+								    		errormsg="请选择性别！" />
+	            						<input type="radio" name="sex1" value="女" title="女" />
+            						</span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">多选(定制)</label>
+							    <span class="form-block m-checkbox-customized">
+							    	<span class="form-input-wrap input-min-wrap">
+								    	<input type="checkbox" 
+								    		name="like" 
+								    		value="eat" 
+								    		title="吃饭" 
+								    		datatype="checkbox" 
+								    		errormsg="请选择你的爱好！"
+								    		/>
+									    <input type="checkbox" name="like" value="sleep" title="睡觉" />
+									    <input type="checkbox" name="like" value="play" title="打豆豆" />
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">普通的下拉框</label>
+							    <span class="form-block">
+							    	<span class="form-input-wrap">
+									    <select name="city-default" 
+									    	data-filter="filters" 
+									    	datatype="select" 
+									    	errormsg="请选择一个你喜欢的城市！">
+									        <option value="">请选择一个城市</option>
+									        <option value="010">北京</option>
+									        <option value="021">上海</option>
+									        <option value="022">天津</option>
+									        <option value="023">重庆</option>
+									    </select>
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">日期</label>
+							    <span class="form-block form-block-long">
+							    	<!-- 日期 需要调用JS渲染 -->
+							    	<div class="ui-datepicker">
+							    		<input type="text" class="ui-input" id="j-form-date" 
+									    	datatype="*" 
+							    			/>
+							    	</div>
+							    	<!-- 日期 -->
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+                    		<div class="ui-form-item">
+							    <label class="form-label">文本域</label>
+							    <span class="form-block form-block-long">
+							    	<span class="form-input-wrap">
+									    <textarea name="desc" 
+									    	placeholder="请输入内容" 
+									    	class="layui-textarea"
+									    	datatype="s5-16" 
+									    	errormsg="昵称至少5个字符,最多16个字符！"
+									    	></textarea>
+								    </span>
+								    <span class="Validform_checktip form-checktip"></span>
+							    </span>
+						    </div>
+						    <div class="ui-form-item">
+						    	<a href="javascript:;" class="ui-btn-blue-gradients" id="j-btn-submit">提交</a>
+						    </div>
+						</form>
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+
+            <!-- 底部 -->
+            @@include('./include/footer.html',{"baseurl":"."})
+            <!-- 底部 -->
+        </div>
+        <!--/page-->
+    </div>
+    <!--/wrapper-->
+    
+    
+    <script type="text/javascript" src="./assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="./assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="./assets/scripts/plugins/validform_v5.3.2/Validform.js"></script>
+    <script type="text/javascript" src="./assets/scripts/plugins/validform_v5.3.2/Validform.pwdStrength.js"></script>
+    <script type="text/javascript">
+    	var datapicker = CompDatePicker();
+		datapicker.render({
+		    //指定元素
+		    elem: '#j-a-simple-date',
+		    //type: 'date'、'time'、'datetime'、'year'、'month'
+		    type: 'datetime',
+		    //可任意组合
+		    format: 'yyyy年MM月dd日 HH:mm:ss'
+		});
+		//日期有效范围
+		var beginDate = datapicker.render({ 
+		    elem: '#j-begin-date',
+		    range: '~'
+		});
+
+
+		//联动下拉
+		var forms = CompForms();
+		//渲染指定容器下的城市联动
+	    forms.cityLinkAge({
+	        //form表单容器
+	        form: '#j-form-linkage'
+	    });
+	    //联动下拉
+	    
+	    //表单验证
+	    
+	    
+	    //初始化表单中的日期
+	    var formDate = datapicker.render({
+		    //指定元素
+		    elem: '#j-form-date',
+		    //type: 'date'、'time'、'datetime'、'year'、'month'
+		    type: 'date',
+		    //可任意组合
+		    format: 'yyyy年MM月dd日'
+		});
+		
+	    var validForm = $('#j-validform');
+	    var result = validForm.Validform({
+	    	tiptype: 2,
+	    	showAllError: true,
+	    });
+
+	    $('#j-btn-submit').click(function(){
+	    	validForm.submit();
+		});
+		
+		datapicker.render({
+		    //指定元素
+		    elem: '#j-form-date-begin',
+		    //type: 'date'、'time'、'datetime'、'year'、'month'
+		    type: 'date',
+		    //可任意组合
+		    format: 'yyyy.MM.dd'
+		});
+		datapicker.render({
+		    //指定元素
+		    elem: '#j-form-date-end',
+		    //type: 'date'、'time'、'datetime'、'year'、'month'
+		    type: 'date',
+		    //可任意组合
+		    format: 'yyyy.MM.dd'
+		});
+
+    </script>
+</body>
+</html>

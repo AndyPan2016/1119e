@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Fette-Engschrift";
+    src: url("Fette-Engschrift.eot"); /* IE9 */
+    src: url("Fette-Engschrift.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Fette-Engschrift.woff") format("woff"), /* chrome, firefox */
+    url("Fette-Engschrift.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("Fette-Engschrift.svg#Fette-Engschrift") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+

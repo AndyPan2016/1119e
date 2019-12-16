@@ -1,0 +1,249 @@
+/**
+ * 头部Less
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-05-05 11:39:00
+ */
+
+@import "_mixins.less";
+
+/**
+ * 元素阴影
+ * @shadow (h-shadow v-shadow blur spread color inset)
+ *      h-shadow:必需。水平阴影的位置。允许负值。
+ *      v-shadow:必需。垂直阴影的位置。允许负值。
+ *      blur    :可选。模糊距离。
+ *      spread  :可选。阴影的尺寸。
+ *      color   :可选。阴影的颜色。请参阅 CSS 颜色值。
+ *      inset   :可选。将外部阴影 (outset) 改为内部阴影。
+ */
+.box-shadow(@shadow: 5px 5px 5px #888888){
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+.header{
+	.header-top{
+		@topH: 40px;
+		height: @topH;
+		background: @color-gray-dark;
+		.header-top-item{
+			float: left;
+			height: @topH;
+			line-height: @topH;
+			font-size: @font-size-base;
+			color: @color-white;
+			margin-right: 22px;
+			.header-login-regist{
+				display: inline-block;
+				text-decoration: none;
+				color: @color-white;
+				font-size: @font-size-base;
+				margin: 0 10px;
+			}
+		}
+		.header-tools{
+			float: right;
+			height: @topH;
+			.tools-item{
+				float: left;
+				height: @topH;
+				line-height: @topH;
+				font-size: @font-size-base;
+				color: @color-white;
+				text-decoration: none;
+				margin-left: 20px;
+				i{
+					color:#5cb75c;
+					margin-right:10px;
+					float:left;
+				}
+			}
+		}
+	}
+	.header-nav{
+		@navH: 60px;
+		height: @navH;
+		background: @color-white;
+		border-bottom:1px solid #e3e3e3;
+		.header-logo{
+			display: inline-block;
+			height: @navH;
+			width: @logo-width;
+			text-decoration: none;
+			background: url('@{bg-icon}icon-logo.png') 0 center no-repeat;
+			float: left;
+		}
+		.header-site-area{
+			display: inline-block;
+			/* width: 80px; */
+			height: @navH;
+			line-height: @navH;
+			margin-left: 30px;
+			float: left;
+			position: relative;
+			&.active, &:hover{
+				.site-area-list{
+					display: block;
+				}
+			}
+			.site-area{
+				display: inline-block;
+				text-decoration: none;
+				outline: none;
+				/* width: 80px; */
+				height: 26px;
+				line-height: 26px;
+				margin-top: 15px;
+				border: 1px solid @color-green-light;
+				.border-radius(3px);
+				/* padding: 0 10px; */
+				color: @color-green-light;
+				font-size: @font-size-base;
+			}
+			.site-area-list{
+				width: 100px;
+				height: auto;
+				background: @color-white;
+				border: 1px solid @color-gray-light;
+				.border-radius(3px);
+				line-height: 0;
+				position: absolute;
+				left: 0;
+				top: 50px;
+				z-index: 1;
+				display: none;
+				.box-shadow(0px 0px 10px #ccc);
+				.site-area-item{
+					display: inline-block;
+					width: 100%;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					font-size: font-size-grade1;
+					color: @color-gray-dark;
+					text-decoration: none;
+					outline: none;
+				}
+			}
+		}
+		.nav-wrap{
+			float: left;
+			margin-left: 118px;
+			height: 40px;
+			margin-top: 10px;
+			.nav-item{
+				float: left;
+				padding: 0 20px;
+				margin: 0 5px;
+				height: 40px;
+				line-height: 40px;
+				color: @color-gray-dark;
+				font-size: @font-size-grade2;
+				text-decoration: none;
+				outline: none;
+				position: relative;
+
+				.nav-item-text{
+					color: @color-gray-dark;
+					font-size: @font-size-grade2;
+					text-decoration: none;
+					outline: none;
+				}
+
+				.nav-caret-list{
+					display: inline-block;
+					width: 160px;
+					.border-radius(3px);
+					position: absolute;
+					left: 0;
+					top: 40px;
+					z-index:11;
+					background: @color-white;
+					border: 1px solid @color-gray-light;
+					.box-shadow(0px 0px 10px #ccc);
+					display: none;
+					padding: 10px 0;
+					.site-area-item{
+						display: block;
+						width: 100%;
+						text-align: left;
+						padding-left: 20px;
+						height: 30px;
+						line-height: 30px;
+						text-decoration: none;
+						outline: none;
+						font-size: @font-size-grade1;
+						color: @color-gray-dark;
+						font-weight: normal;
+						&:hover{
+							color: @color-gray-darker;
+						}
+					}
+				}
+
+				&.caret{
+					padding-right: 15px;
+					.clearfix();
+					&:after{
+						display: inline-block;
+					    width: 0;
+					    height: 0;
+					    margin-left: 5px;
+					    vertical-align: middle;
+					    border-top: 4px dashed;
+					    border-top: 4px solid;
+					    border-right: 4px solid transparent;
+					    border-left: 4px solid transparent;
+					}
+				}
+
+				&.active, &:hover{
+					color: @color-gray-darker;
+					.clearfix();
+					.nav-caret-list{
+						display: block;
+					}
+					&:before{
+						display: inline-block;
+						width: 100%;
+						height: 4px;
+						background: @color-green-light;
+						font-size: 0;
+						position: absolute;
+						bottom: -10px;
+						left: 0;
+					}
+					&.caret{
+						padding-right: 15px;
+						&:after{
+							display: inline-block;
+						    width: 0;
+						    height: 0;
+						    margin-left: 5px;
+						    vertical-align: middle;
+						    border-top: 4px dashed;
+						    border-top: 4px solid;
+						    border-right: 4px solid transparent;
+						    border-left: 4px solid transparent;
+						}
+					}
+				}
+			}
+		}
+		.nav-my-account{
+			float: right;
+			height: @navH;
+			line-height: @navH;
+			color: @color-gray-dark;
+			font-size: @font-size-grade2;
+			text-decoration: none;
+			outline: none;
+		}
+	}
+	.header-wrap{
+		width: @container-width;
+		margin: 0 auto;
+		height: 100%;
+	}
+}

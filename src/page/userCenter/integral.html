@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1119贷-同城互联网金融平台</title> 
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../assets/scripts/plugins/pyui/css/pyui.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/page.usercenter.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page page-usercenter">
+            <!-- 头部 -->
+            @@include('../include/header.html')
+            <!-- 头部 -->
+
+            <!-- 内容区域 start -->
+            <div class="container container-sticky">
+                <div class="container-sticky-wrap">
+                    <div class="container-wrap">
+                        <div class="usercenter-wrap">
+                            <!--左边内容区域 start-->
+                            @@include('../include/uc.menus.html')
+                            <!--左边内容区域 end  -->
+
+                            <!--右边内容区域 start-->
+                            <div class="usercenter-right integral-wrap">
+                                <!-- 选项卡区域 start -->
+                                <div class="ui-tabs j-tabs" id="j-tabs">
+                                    <ul class="ui-tabs-hd">
+                                        <li class="tabs-hd-item j-tabs-hd-item active first"><span></span>我的积分</li>
+                                        <li class="tabs-hd-item j-tabs-hd-item"><span></span>积分订单</li>
+                                    </ul>
+                                    <div class="ui-tabs-bd">
+                                        <div class="tabs-bd-item j-tabs-cont-item active">
+                                            <div class="content">
+                                                <!-- m-ucbase start -->
+                                                <div class="m-ucbase">
+                                                    <!-- hd start -->
+                                                    <div class="hd">
+                                                        <div class="fn-left">
+                                                            <span class="round"><i class="icon icon-book"></i></span>
+                                                            <h3 class="ui-title">积分账户概况</h3>
+                                                        </div>
+                                                    </div>
+                                                    <!-- hd end   -->
+
+                                                    <!-- bd start -->
+                                                    <div class="bd">
+                                                        <div class="integral-account">
+                                                            <div class="fn-left item-1">
+                                                                <h3>总积分</h3>
+                                                                <p class="ui-numeric">13100</p>
+                                                            </div>
+                                                            <div class="fn-left item-2">
+                                                                <h3>总积分</h3>
+                                                                <p class="ui-numeric green">13100</p>
+                                                            </div>
+                                                            <div class="fn-left item-3">
+                                                                <h3>总积分</h3>
+                                                                <p class="ui-numeric dark">10</p>
+                                                            </div>
+                                                            <div class="fn-left item-4">
+                                                                <a href="javascript:;" class="ui-btn-black-line">签到领积分+200</a>
+                                                                <p><a href="#" class="color-red">查看积分规则</a> 丨 <a href="#" class="color-green">获取更多积分</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- bd end   -->
+                                                </div>
+                                                <!-- m-ucbase end  -->
+
+                                                <!-- m-ucbase start -->
+                                                <div class="m-ucbase">
+                                                    <!-- hd start -->
+                                                    <div class="hd">
+                                                        <div class="fn-left">
+                                                            <span class="round"><i class="icon icon-integral"></i></span>
+                                                            <h3 class="ui-title">积分明细</h3>
+                                                        </div>
+                                                    </div>
+                                                    <!-- hd end   -->
+
+                                                    <!-- bd start -->
+                                                    <div class="bd">
+                                                        <p>表格部份请调用公用表格模块，根据需求进行删除。表格公用结构在（src -> htmls -> ui-table.html）。</p>
+                                                        <p>分页部份请调用公用分页模块，根据需求进行删除。分页公用结构在（src -> htmls -> ui-pager.html）。</p>
+                                                    </div>
+                                                    <!-- bd end   -->
+
+                                                    <!-- ft start -->
+                                                    <div class="ft"></div>
+                                                    <!-- ft end   -->
+                                                </div>
+                                                <!-- m-ucbase end  -->
+
+                                            </div><!--/content-->
+                                        </div><!--/tabs-bd-item-->
+
+                                        <div class="tabs-bd-item j-tabs-cont-item">
+                                            <div class="content">
+                                                <p>表格部份请调用公用表格模块，根据需求进行删除。表格公用结构在（src -> htmls -> ui-table.html）。</p>
+                                                <p>分页部份请调用公用分页模块，根据需求进行删除。分页公用结构在（src -> htmls -> ui-pager.html）。</p>
+                                            </div>
+                                        </div><!--/tabs-bd-item-->
+                                    </div><!--/ui-tabs-bd-->
+                                </div>
+                                <!-- 选项卡区域 end   -->
+                            </div>
+                            <!--右边内容区域 end  -->
+                        </div><!--/usercenter-wrap-->
+                    </div><!--/container-wrap-->
+                </div><!--/container-sticky-wrap-->
+            </div>
+            <!-- 内容区域 end  -->
+
+            <!-- 底部 -->
+             @@include('../include/footer.html',{"baseurl":".."})
+            <!-- 底部 -->
+        </div><!--/page-->
+    </div><!--/wrapper-->
+
+    <script type="text/javascript" src="../assets/scripts/vendor.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/pyui/index.js"></script>
+    <script type="text/javascript" src="../assets/scripts/plugins/swiper.js"></script>
+    <script type="text/javascript" src="../assets/scripts/commons.js"></script>
+
+    <script>
+        $(function() {
+            //调用CompTabs组件
+            var tabs = CompTabs({
+                target: $('#j-tabs')
+            });
+            //自定义选项卡组件的切换事件
+            tabs.on('switch', function(target, thisItem, idx){
+                console.info(idx);
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/**
+ * 描述
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-06-08 18:29:10
+ */
+
+@import "_mixins.less";
+
+/**
+ * 元素阴影
+ * @shadow (h-shadow v-shadow blur spread color inset)
+ *      h-shadow:必需。水平阴影的位置。允许负值。
+ *      v-shadow:必需。垂直阴影的位置。允许负值。
+ *      blur    :可选。模糊距离。
+ *      spread  :可选。阴影的尺寸。
+ *      color   :可选。阴影的颜色。请参阅 CSS 颜色值。
+ *      inset   :可选。将外部阴影 (outset) 改为内部阴影。
+ */
+.box-shadow(@shadow: 0 0 20px rgba(124,124,124,0.1)){
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+/**
+ * 效果过度
+ * @shadow (property duration timing-function delay)
+ *      property       :规定设置过渡效果的 CSS 属性的名称。
+ *      duration       :规定完成过渡效果需要多少秒或毫秒。
+ *      timing-function:规定速度效果的速度曲线。
+ *      delay          :定义过渡效果何时开始。
+ */
+.transition(@transition: all .2s ease .2s){
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+.page-special{
+	.special-banner{
+		height: 400px;
+		background: url(../images/special/special-banner.jpg) center center no-repeat;
+
+	}
+	.special-banner-remark{
+		height: 430px;
+		background: url(../images/special/special-banner-remark.jpg) center center no-repeat;
+		
+		.remark-txt{
+			width: 720px;
+			line-height: 30px;
+			font-size: 20px;
+			color: #f5f5f5;
+			text-align: left;
+			position: absolute;
+			bottom: 38px;
+			left: 38px;
+		}
+		.ui-special-btn{
+			position: absolute;
+			right: 45px;
+			bottom: 60px;
+		}
+	}
+	.special-tasks{
+		height: 655px;
+		background: url(../images/special/special-tasks.jpg) center center no-repeat;
+		.special-wrap{
+			height: auto;
+			padding-top: 120px;
+			text-align: left;
+			color: #FFF;
+			.task-txt-title{
+				padding: 0;
+				margin: 0;
+				padding-left: 170px;
+				font-size: 18px;
+				line-height: 34px;
+				&.btm{
+					margin-top: 32px;
+				}
+			}
+			.task-txt{
+				padding-left: 190px;
+				font-size: 18px;
+				line-height: 34px;
+				font{
+					font-size: 24px;
+				}
+			}
+			.ui-special-btn{
+				position: absolute;
+				right: 45px;
+				bottom: 60px;
+			}
+			.ui-special-link{
+				position: absolute;
+				right: 45px;
+				bottom: 0px;
+			}
+		}
+	}
+	.special-tasks-more{
+		height: 1405px;
+		background: url(../images/special/special-tasks-more.jpg) center center no-repeat;
+		.special-wrap{
+			width: 1300px;
+			padding-left: 50px;
+			.tasks-more-wrap{
+				height: 406px;
+				overflow: hidden;
+				padding-top: 158px;
+				&.mt-160{
+					width: 1200px;
+					margin-top: 160px;
+					padding: 0;
+					.tasks-more-list{
+						width: 100%;
+						text-align: center;
+						margin-left: 7px;
+						.more-item-wrap{
+							display: inline-block;
+						}
+						.tasks-more-item{
+							display: inline-block;
+							//float: inherit;
+						}
+					}
+				}
+				.tasks-more-list{
+					width: 110%;
+					margin-left: -15px;
+					height: 406px;
+					.clearfix();
+
+					.tasks-more-item{
+						display: inline-block;
+						width: 280px;
+						height: 376px;
+						float: left;
+						margin: 10px 15px;
+						background: #FFF;
+						.border-radius(5px);
+						.box-shadow(10px 10px 10px rgba(51,51,51,.3));
+						.transition(all .3s ease);
+
+						&:hover, &.hover{
+							margin-top: 0;
+						}
+
+						.item-cont{
+							display: block;
+							width: 208px;
+							margin: 0 auto;
+							text-align: center;
+							margin-top: 42px;
+							.thumb{
+								display: inline-block;
+								margin: 0 auto;
+							}
+							.title{
+								display: block;
+								margin-top: 20px;
+								height: 46px;
+								border-bottom: 1px solid #d42104;
+								font-size: 18px;
+								color: #333333;
+							}
+							.remark{
+								display: block;
+								margin-top: 30px;
+								font-size: 18px;
+								color: #333333;
+							}
+							.value{
+								display: block;
+								margin-top: 18px;
+								font-size: 18px;
+								color: #333333;
+							}
+							.ui-special-btn{
+								display: block;
+								width: 208px;
+								margin: 0 auto;
+								margin-top: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.special-wrap{
+		width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	.ui-special-btn{
+		display: inline-block;
+		width: 258px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+		background: #ffc437;
+		.border-radius(7px);
+		.box-shadow(0 0 20px rgba(255,255,255,0.4));
+		&:hover{
+			color: #FF5E17;
+		}
+	}
+	.ui-special-link{
+		display: inline-block;
+		width: 258px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 18px;
+		color: #f5f5f5;
+		text-decoration: underline;
+	}
+}
